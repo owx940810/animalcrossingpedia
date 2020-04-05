@@ -1,10 +1,12 @@
 <template lang="pug">
   #app
+    #alert
+      p bug list coming soon*
     img#logo(alt="Animal Crossing logo" src="./assets/animal-crossing-logo-700px.png")
     All(:all="all")
     footer
       //- p built by Calvin Ong | #[a(href="https://redd.it/8z14wf") reddit ]| #[a(href="https://calvinong.dev/", target="_blank") calvinong.dev]
-      p built by Calvin Ong | #[a(href="https://github.com/owx940810/animalcrossingpedia", target="_blank") Github] | #[a(href="https://calvinong.dev/", target="_blank") calvinong.dev]
+      p built by #[a(href="https://calvinong.dev/", target="_blank") Calvin Ong] | #[a(href="https://github.com/owx940810/animalcrossingpedia", target="_blank") Github]
       p.
         Credits:
         #[a(href="https://www.ign.com/wikis/animal-crossing-new-horizons/Fish_Guide:_Fish_List,_Sell_Price,_and_Fishing_Tips" target="_blank") IGN]
@@ -54,6 +56,13 @@ export default {
 
     +mobile
       width: 150px
+  #alert
+    color: darkgrey
+    background-color: #E6E6E6
+    font-size: 10px
+    padding: 5px
+    text-align: center
+    font-style: italic
 
   footer
     text-align: center
