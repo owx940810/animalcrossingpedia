@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono')
+
+@import 'variables'
+@import 'mixins'
+
+*, *::before, *::after
+  box-sizing: border-box
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  -webkit-tap-highlight-color: transparent
+
+input, input:before, input:after
+  -webkit-user-select: initial
+  -khtml-user-select: initial
+  -moz-user-select: initial
+  -ms-user-select: initial
+  user-select: initial
+
+html
+  height: 100%
+
+body
+  margin: 0
+  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  background-color: $powder
+
+h1, h2, h3, h4, h5, h6, p
+  line-height: 1
+  margin: 0
+
+h1
+  font-size: 48px
+  +mobile
+      font-size: 38px
+
+h2
+  font-size: 42px
+  +mobile
+      font-size: 34px
+
+h3
+  font-size: 36px
+  +mobile
+      font-size: 30px
+
+h4
+  font-size: 30px
+  +mobile
+      font-size: 26px
+
+h5
+  font-size: 22px
+  +mobile
+      font-size: 18px
+
+a, a:link, a:hover, a:active
+  color: inherit
+
+img
+    max-width: 100%
+
+button
+  cursor: pointer
+  outline: none
+  font-size: inherit
+
+input
+  font-size: inherit
+  outline: none
+
+button
+  &.default
+    padding: 10px 20px
+    background-color: $white
+    border-radius: 7px
+    border: 0
+    box-shadow: 0 5px 0 $grey-l
+    font-family: "Share Tech Mono", sans-serif
+    transition: all 100ms
+
+    &:hover
+      transform: scale(1.05)
+
+    &:active
+      transform: translateY(3px)
+      box-shadow: 0 2px 0 $grey-l
+
+    hr
+      border: 0
+      border-top: 1px solid $black
+
+button
+  &.favorite, &.removefavorite
+    position: absolute
+    top: 10px
+    right: 10px
+    display: block
+    outline: none
+    border-radius: 10px
+    background-size: 20px
+    background-position: 95% center
+    background-repeat: no-repeat
+    font-family: "Share Tech Mono", sans-serif
+    font-weight: bold
+    transition: all 200ms
+
+    &:hover
+      color: $white
+
+  &.favorite
+    padding: 10px 30px 10px 10px
+    background-image: url("../assets/feather/star-default.svg")
+    background-color: $white
+    border: 3px solid $yellow
+    color: $yellow
+
+    &:hover
+      background-color: $yellow
+      background-image: url("../assets/feather/star-hover.svg")
+
+  &.removefavorite
+    padding: 10px 10px 10px 10px
+    background-color: $white
+    border: 3px solid $red
+    color: $red
+
+    &:hover
+      background-color: $red

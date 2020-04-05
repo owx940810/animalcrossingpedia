@@ -1,28 +1,66 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+  #app
+    img#logo(alt="Animal Crossing logo" src="./assets/animal-crossing-logo-700px.png")
+    All(:all="all")
+    footer
+      //- p built by Calvin Ong | #[a(href="https://redd.it/8z14wf") reddit ]| #[a(href="https://calvinong.dev/", target="_blank") calvinong.dev]
+      p built by Calvin Ong | #[a(href="https://github.com/owx940810/animalcrossingpedia", target="_blank") Github] | #[a(href="https://calvinong.dev/", target="_blank") calvinong.dev]
+      p.
+        Credits:
+        #[a(href="https://www.ign.com/wikis/animal-crossing-new-horizons/Fish_Guide:_Fish_List,_Sell_Price,_and_Fishing_Tips" target="_blank") IGN]
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import All from './components/All.vue'
+import Favorites from './components/Favorites.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    All, Favorites
+  },
+
+  data () {
+    return {
+      all: [],
+      favorites: []
+    }
+  },
+
+  async created () {
+    let res = await(await window.fetch('data/fish.json')).json()
+    this.all = res
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+  @import './sass/mixins'
+  @import './sass/variables'
+
+  #app
+
+  #logo
+    display: block
+    width: 300px
+    margin: 0 auto
+    margin-top: 20px
+
+    +mobile
+      width: 150px
+
+  footer
+    text-align: center
+    padding: 10px 20px
+    background-color: $grey-d
+    font-size: 0.8em
+    color: $white
+
+    a
+      text-decoration: none
+      color: $yellow
+
+    p + p
+      margin-top: 10px
+
 </style>
