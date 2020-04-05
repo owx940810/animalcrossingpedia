@@ -8,80 +8,83 @@
     //-         img(:src="item.image" )
     //-         P {{ item.name }}
 
-    .toggles
-      #filter-wrapper
-        .filter-container
-          p HEMISPHERE:
-          .filters
-            label
-              input(type="checkbox" value="north" v-model="filterProperties.hemisphere")
-              span north
-            label
-              input(type="checkbox" value="south" v-model="filterProperties.hemisphere")
-              span south
+    #filter-wrapper
+      .wrapper
+        p FILTERS
+        .filter-containers
+          .filter-container
+            p HEMISPHERE:
+            .filters
+              label
+                input(type="checkbox" value="north" v-model="filterProperties.hemisphere")
+                span north
+              label
+                input(type="checkbox" value="south" v-model="filterProperties.hemisphere")
+                span south
 
-        .filter-container
-          p MONTHS:
-          .filters
-            label
-              input(type="checkbox" value="January" v-model="filterProperties.months")
-              span Jan
-            label
-              input(type="checkbox" value="February" v-model="filterProperties.months")
-              span Feb
-            label
-              input(type="checkbox" value="March" v-model="filterProperties.months")
-              span Mar
-            label
-              input(type="checkbox" value="April" v-model="filterProperties.months")
-              span Apr
-            label
-              input(type="checkbox" value="May" v-model="filterProperties.months")
-              span May
-            label
-              input(type="checkbox" value="June" v-model="filterProperties.months")
-              span Jun
-            label
-              input(type="checkbox" value="July" v-model="filterProperties.months")
-              span Jul
-            label
-              input(type="checkbox" value="August" v-model="filterProperties.months")
-              span Aug
-            label
-              input(type="checkbox" value="September" v-model="filterProperties.months")
-              span Sep
-            label
-              input(type="checkbox" value="October" v-model="filterProperties.months")
-              span Oct
-            label
-              input(type="checkbox" value="November" v-model="filterProperties.months")
-              span Nov
-            label
-              input(type="checkbox" value="December" v-model="filterProperties.months")
-              span Dec
+          .filter-container
+            p MONTHS:
+            .filters
+              label
+                input(type="checkbox" value="January" v-model="filterProperties.months")
+                span Jan
+              label
+                input(type="checkbox" value="February" v-model="filterProperties.months")
+                span Feb
+              label
+                input(type="checkbox" value="March" v-model="filterProperties.months")
+                span Mar
+              label
+                input(type="checkbox" value="April" v-model="filterProperties.months")
+                span Apr
+              label
+                input(type="checkbox" value="May" v-model="filterProperties.months")
+                span May
+              label
+                input(type="checkbox" value="June" v-model="filterProperties.months")
+                span Jun
+              label
+                input(type="checkbox" value="July" v-model="filterProperties.months")
+                span Jul
+              label
+                input(type="checkbox" value="August" v-model="filterProperties.months")
+                span Aug
+              label
+                input(type="checkbox" value="September" v-model="filterProperties.months")
+                span Sep
+              label
+                input(type="checkbox" value="October" v-model="filterProperties.months")
+                span Oct
+              label
+                input(type="checkbox" value="November" v-model="filterProperties.months")
+                span Nov
+              label
+                input(type="checkbox" value="December" v-model="filterProperties.months")
+                span Dec
 
-        .filter-container
-          p LOCATION:
-          .filters
-            label
-              input(type="checkbox" value="River" v-model="filterProperties.location")
-              span river
-            label
-              input(type="checkbox" value="Pond" v-model="filterProperties.location")
-              span pond
-            label
-              input(type="checkbox" value="Sea" v-model="filterProperties.location")
-              span sea
-            label
-              input(type="checkbox" value="Pier" v-model="filterProperties.location")
-              span pier
-
-      button.default(@click="changeSort") SORT BY#[br]#[hr]{{ sort.type[sort.index].toLocaleUpperCase() }}
+          .filter-container
+            p LOCATION:
+            .filters
+              label
+                input(type="checkbox" value="River" v-model="filterProperties.location")
+                span river
+              label
+                input(type="checkbox" value="Pond" v-model="filterProperties.location")
+                span pond
+              label
+                input(type="checkbox" value="Sea" v-model="filterProperties.location")
+                span sea
+              label
+                input(type="checkbox" value="Pier" v-model="filterProperties.location")
+                span pier
 
     hr
 
     #search-wrapper
       input(type="text", placeholder="eg: shark", v-model="searcheditem")
+
+    .toggles
+      button.default(@click="changeSort") SORT BY#[br]#[hr]{{ sort.type[sort.index].toLocaleUpperCase() }}
 
     .all
       .item(v-for="item in selecteditems", @click="selectItem(item)", :class="{rounded: sort.index === 0}")
@@ -323,9 +326,7 @@
       margin-top: 30px
       padding: 0 50px
       display: flex
-      flex-direction: row
-      justify-content: space-between
-      align-items: flex-start
+      flex-direction: row-reverse
 
       +mobile
         padding: 0 20px
@@ -334,7 +335,7 @@
       margin-top: 30px
       padding: 0 50px
       display: grid
-      grid-template-columns: repeat(auto-fill, 140px)
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr))
       grid-gap: 15px
 
       +mobile
@@ -533,21 +534,28 @@
         padding: 0 20px
 
     #filter-wrapper
-      display: flex
-      flex-flow: row wrap
-      padding: 10px 20px
-      background-color: $white
-      border-radius: 7px
-      border: 0
-      box-shadow: 0 5px 0 $grey-l
+      margin-top: 30px
+      padding: 0 50px
       font-family: "Share Tech Mono", sans-serif
-      transition: all 100ms
       font-size: 14px
 
       +mobile
-        padding: 5px 10px
+        padding: 0 20px
         font-size: 10px
-        margin-right: 50px
+
+      .wrapper
+        padding: 10px 20px
+        background-color: $white
+        border-radius: 7px
+        border: 0
+        box-shadow: 0 5px 0 $grey-l
+        transition: all 100ms
+
+    .filter-containers
+      margin-top: 20px
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-between
 
       .filter-container
         & + .filter-container
