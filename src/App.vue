@@ -29,6 +29,12 @@ export default {
 
   async created () {
     let res = await(await window.fetch('data/fish.json')).json()
+
+    res.map(item => {
+      item.north = item.north.split(',').map(month => month.trim())
+      item.south = item.south.split(',').map(month => month.trim())
+      return item
+    })
     this.all = res
   }
 }

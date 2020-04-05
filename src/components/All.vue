@@ -33,7 +33,14 @@
           p(v-show="sort.index !== 1") ${{ item.price }}
           p(v-show="sort.index !== 2") {{ item.location }} #[span.extra {{ item.location_extra }}]
           p.time(v-show="sort.index !== 3", :data-time="item.time.split(' ').join('')") {{ item.time }}
-
+          .months.north(v-show="sort.index !== 4")
+            p north:
+            ul
+              li(v-for="month in item.north") {{ month }}
+          .months.south(v-show="sort.index !== 4")
+            p south:
+            ul
+              li(v-for="month in item.south") {{ month }}
 
 
 </template>
@@ -61,7 +68,17 @@ export default {
     selecteditems () {
       let selected = []
       if (this.searcheditem) {
-        selected = this.all.filter(item => item.name.toLowerCase().indexOf(this.searcheditem.toLowerCase()) >= 0)
+        selected = this.all.filter(item => {
+          if (item.name.toLowerCase().indexOf(this.searcheditem.toLowerCase()) >= 0) {
+            return item
+          }
+          if (item.price.toString().toLowerCase().indexOf(this.searcheditem.toLowerCase()) >= 0) {
+            return item
+          }
+          if (item.time.toLowerCase().indexOf(this.searcheditem.toLowerCase()) >= 0) {
+            return item
+          }
+        })
       } else {
         selected =  JSON.parse(JSON.stringify(this.all))
       }
@@ -173,13 +190,13 @@ export default {
       margin-top: 30px
       padding: 0 50px
       display: grid
-      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr))
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
       grid-gap: 15px
 
       +mobile
         padding: 0 20px
         display: grid
-        grid-template-columns: repeat(4, minmax(60px, 1fr))
+        grid-template-columns: repeat(3, minmax(60px, 1fr))
 
       .item
         position: relative
@@ -273,6 +290,11 @@ export default {
               padding: 2px 5px
               align-self: flex-start
 
+              +mobile
+                padding: 2px
+                border-radius: 2px
+                font-size: 8px
+
             &[data-time="4am-9pm"]
               background-color: lemonchiffon
             &[data-time="9am-4pm"]
@@ -301,6 +323,44 @@ export default {
             +mobile
               width: 50px
               height: 50px
+
+          .months
+            padding: 2px 5px 5px
+            margin: 3px 0 0
+            border-radius: 5px
+
+            &.north
+              background-color: mistyrose
+            &.south
+              background-color: aliceblue
+
+            p
+              margin-top: 0
+              display: block
+
+            ul
+              list-style-type: none
+              padding: 0
+              margin: 2px 0 0
+              display: flex
+              flex-flow: row wrap
+
+            li
+              line-height: 1
+              font-size: 12px
+              padding: 2px
+              border-radius: 2px
+              background-color: rgba(255,255,255,0.7)
+              margin-left: 2px
+              +mobile
+                font-size: 8px
+                &:nth-child(n+4)
+                  margin-top: 2px
+
+              &:nth-child(n+5)
+                margin-top: 2px
+
+
 
     .favorites
       margin-top: 20px
