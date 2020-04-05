@@ -7,13 +7,81 @@
     //-       .desc
     //-         img(:src="item.image" )
     //-         P {{ item.name }}
-    //-   hr
-
-    #search-wrapper
-      input(type="text", placeholder="shark", v-model="searcheditem")
 
     .toggles
+      #filter-wrapper
+        .filter-container
+          p HEMISPHERE:
+          .filters
+            label
+              input(type="checkbox" value="north" v-model="filterProperties.hemisphere")
+              span north
+            label
+              input(type="checkbox" value="south" v-model="filterProperties.hemisphere")
+              span south
+
+        .filter-container
+          p MONTHS:
+          .filters
+            label
+              input(type="checkbox" value="January" v-model="filterProperties.months")
+              span Jan
+            label
+              input(type="checkbox" value="February" v-model="filterProperties.months")
+              span Feb
+            label
+              input(type="checkbox" value="March" v-model="filterProperties.months")
+              span Mar
+            label
+              input(type="checkbox" value="April" v-model="filterProperties.months")
+              span Apr
+            label
+              input(type="checkbox" value="May" v-model="filterProperties.months")
+              span May
+            label
+              input(type="checkbox" value="June" v-model="filterProperties.months")
+              span Jun
+            label
+              input(type="checkbox" value="July" v-model="filterProperties.months")
+              span Jul
+            label
+              input(type="checkbox" value="August" v-model="filterProperties.months")
+              span Aug
+            label
+              input(type="checkbox" value="September" v-model="filterProperties.months")
+              span Sep
+            label
+              input(type="checkbox" value="October" v-model="filterProperties.months")
+              span Oct
+            label
+              input(type="checkbox" value="November" v-model="filterProperties.months")
+              span Nov
+            label
+              input(type="checkbox" value="December" v-model="filterProperties.months")
+              span Dec
+
+        .filter-container
+          p LOCATION:
+          .filters
+            label
+              input(type="checkbox" value="River" v-model="filterProperties.location")
+              span river
+            label
+              input(type="checkbox" value="Pond" v-model="filterProperties.location")
+              span pond
+            label
+              input(type="checkbox" value="Sea" v-model="filterProperties.location")
+              span sea
+            label
+              input(type="checkbox" value="Pier" v-model="filterProperties.location")
+              span pier
+
       button.default(@click="changeSort") SORT BY#[br]#[hr]{{ sort.type[sort.index].toLocaleUpperCase() }}
+
+    hr
+
+    #search-wrapper
+      input(type="text", placeholder="eg: shark", v-model="searcheditem")
 
     .all
       .item(v-for="item in selecteditems", @click="selectItem(item)", :class="{rounded: sort.index === 0}")
@@ -35,109 +103,179 @@
           p.time(v-show="sort.index !== 3", :data-time="item.time.split(' ').join('')") {{ item.time }}
           .months.north(v-show="sort.index !== 4")
             p north:
-            ul
-              li(v-for="month in item.north") {{ month }}
+            ul(:class="{allmonths: item.north.indexOf('All Months') >= 0}")
+              li(:class="{active: item.north.indexOf('January') >= 0}") J
+              li(:class="{active: item.north.indexOf('February') >= 0}") F
+              li(:class="{active: item.north.indexOf('March') >= 0}") M
+              li(:class="{active: item.north.indexOf('April') >= 0}") A
+              li(:class="{active: item.north.indexOf('May') >= 0}") M
+              li(:class="{active: item.north.indexOf('June') >= 0}") J
+              li(:class="{active: item.north.indexOf('July') >= 0}") J
+              li(:class="{active: item.north.indexOf('August') >= 0}") A
+              li(:class="{active: item.north.indexOf('September') >= 0}") S
+              li(:class="{active: item.north.indexOf('October') >= 0}") O
+              li(:class="{active: item.north.indexOf('November') >= 0}") N
+              li(:class="{active: item.north.indexOf('December') >= 0}") D
           .months.south(v-show="sort.index !== 4")
             p south:
-            ul
-              li(v-for="month in item.south") {{ month }}
+            ul(:class="{allmonths: item.south.indexOf('All Months') >= 0}")
+              li(:class="{active: item.south.indexOf('January') >= 0}") J
+              li(:class="{active: item.south.indexOf('February') >= 0}") F
+              li(:class="{active: item.south.indexOf('March') >= 0}") M
+              li(:class="{active: item.south.indexOf('April') >= 0}") A
+              li(:class="{active: item.south.indexOf('May') >= 0}") M
+              li(:class="{active: item.south.indexOf('June') >= 0}") J
+              li(:class="{active: item.south.indexOf('July') >= 0}") J
+              li(:class="{active: item.south.indexOf('August') >= 0}") A
+              li(:class="{active: item.south.indexOf('September') >= 0}") S
+              li(:class="{active: item.south.indexOf('October') >= 0}") O
+              li(:class="{active: item.south.indexOf('November') >= 0}") N
+              li(:class="{active: item.south.indexOf('December') >= 0}") D
 
 
 </template>
 
 <script>
-import _ from 'lodash'
+  import _ from 'lodash'
 
-export default {
-  name: 'All',
+  export default {
+    name: 'All',
 
-  props: ['all'],
+    props: ['all'],
 
-  data () {
-    return {
-      searcheditem: '',
-      favorites: [],
-      sort: {
-        type: ['name', 'price', 'location', 'time'],
-        index: 0
+    data () {
+      return {
+        filterProperties: {
+          hemisphere: [],
+          months: [],
+          location: []
+        },
+        searcheditem: '',
+        favorites: [],
+        sort: {
+          type: ['name', 'price', 'location', 'time'],
+          index: 0
+        }
       }
-    }
-  },
+    },
 
-  computed: {
-    selecteditems () {
-      let selected = []
-      if (this.searcheditem) {
-        selected = this.all.filter(item => {
-          if (item.name.toLowerCase().indexOf(this.searcheditem.toLowerCase()) >= 0) {
-            return item
-          }
-          if (item.price.toString().toLowerCase().indexOf(this.searcheditem.toLowerCase()) >= 0) {
-            return item
-          }
-          if (item.time.toLowerCase().indexOf(this.searcheditem.toLowerCase()) >= 0) {
-            return item
-          }
+    computed: {
+      filteredItems () {
+        let arr = JSON.parse(JSON.stringify(this.all))
+
+        if(this.filterProperties.months.length > 0) {
+          arr = arr.filter(item => {
+            if (this.filterProperties.hemisphere.length === 1) {
+              if (this.filterProperties.hemisphere.indexOf('north') >= 0) {
+                return this.filterProperties.months.filter(filteredMonth => {
+                  return item.north.indexOf(filteredMonth) >= 0 || item.north[0] === 'All Months'
+                }).length > this.filterProperties.months.length - 1
+              }
+              if (this.filterProperties.hemisphere.indexOf('south') >= 0) {
+                return this.filterProperties.months.filter(filteredMonth => {
+                  return item.south.indexOf(filteredMonth) >= 0
+                }).length > this.filterProperties.months.length - 1
+              }
+            } else {
+              return this.filterProperties.months.filter(filteredMonth => {
+                let north = item.north.indexOf(filteredMonth) >= 0 || item.north[0] === 'All Months'
+                let south = item.south.indexOf(filteredMonth) >= 0 || item.south[0] === 'All Months'
+
+                if (this.filterProperties.hemisphere.length === 2) {
+                  return north && south
+                } else {
+                  return north || south
+                }
+              }).length > this.filterProperties.months.length - 1
+            }
+          })
+        }
+
+        if (this.filterProperties.location.length > 0) {
+          arr = arr.filter(item => {
+            return this.filterProperties.location.filter(filteredLocation => {
+              return item.location.indexOf(filteredLocation) >= 0
+            }).length > 0
+          })
+        }
+
+        return arr
+      },
+
+      selecteditems () {
+        let selected = []
+
+        let arr = this.filteredItems
+
+        if (this.searcheditem) {
+          selected = arr.filter(item => {
+            if (item.name.toLowerCase().indexOf(this.searcheditem.toLowerCase()) >= 0) {
+              return item
+            }
+          })
+        } else {
+          selected = arr
+        }
+
+        let sort = this.sort.type[this.sort.index]
+        let direction = 'asc'
+        if (sort === 'price') {
+          direction = 'desc'
+        }
+        return _.orderBy(selected, [sort], [direction])
+      }
+    },
+
+    mounted () {
+      // gtag('config', 'UA-93111170-3', {
+      //   'page_title': 'landing',
+      //   'page_path': '/'
+      // })
+
+      this.getSortType()
+      this.getFavorites()
+    },
+
+    methods: {
+      selectItem (item) {
+        gtag('event', 'button', {
+          'event_category': 'selectitem',
+          'event_label': item.name
         })
-      } else {
-        selected =  JSON.parse(JSON.stringify(this.all))
+
+        // popup
+        // this.$router.push('/pokemon/' + pokemon.id)
+      },
+
+      getFavorites () {
+        let storage = window.localStorage.getItem('favorite')
+        if (!storage) {
+          return
+        }
+        let favorites = JSON.parse(storage)
+        this.favorites = favorites.map(item => this.all.find(item2 => parseInt(item2.id) === parseInt(item)))
+      },
+
+      getSortType () {
+        if (!window.localStorage.getItem('sort')) {
+          return window.localStorage.setItem('sort', this.sort.index)
+        }
+        this.sort.index = parseInt(window.localStorage.getItem('sort'))
+      },
+
+      changeSort () {
+        this.sort.index++
+        if (this.sort.index >= this.sort.type.length) {
+          this.sort.index = 0
+        }
+        window.localStorage.setItem('sort', this.sort.index)
+      },
+
+      filterHemisphere () {
+
       }
-
-      let sort = this.sort.type[this.sort.index]
-      let direction = 'asc'
-      if (sort === 'price') {
-        direction = 'desc'
-      }
-      return _.orderBy(selected, [sort], [direction])
-    }
-  },
-
-  mounted () {
-    // gtag('config', 'UA-93111170-3', {
-    //   'page_title': 'landing',
-    //   'page_path': '/'
-    // })
-
-    this.getSortType()
-    this.getFavorites()
-  },
-
-  methods: {
-    selectItem (item) {
-      gtag('event', 'button', {
-        'event_category': 'selectitem',
-        'event_label': item.name
-      })
-
-      // popup
-      // this.$router.push('/pokemon/' + pokemon.id)
-    },
-
-    getFavorites () {
-      let storage = window.localStorage.getItem('favorite')
-      if (!storage) {
-        return
-      }
-      let favorites = JSON.parse(storage)
-      this.favorites = favorites.map(item => this.all.find(item2 => parseInt(item2.id) === parseInt(item)))
-    },
-
-    getSortType () {
-      if (!window.localStorage.getItem('sort')) {
-        return window.localStorage.setItem('sort', this.sort.index)
-      }
-      this.sort.index = parseInt(window.localStorage.getItem('sort'))
-    },
-
-    changeSort () {
-      this.sort.index++
-      if (this.sort.index >= this.sort.type.length) {
-        this.sort.index = 0
-      }
-      window.localStorage.setItem('sort', this.sort.index)
     }
   }
-}
 </script>
 
 <style lang="sass">
@@ -148,10 +286,14 @@ export default {
     margin-top: 50px
     padding-bottom: 50px
 
+    > hr
+      width: calc(100% - 100px)
+      margin-top: 60px
+
     #search-wrapper
       position: relative
       display: block
-      margin: 20px auto 0 auto
+      margin: 40px auto 0 auto
       width: 300px
 
       &::after
@@ -181,7 +323,9 @@ export default {
       margin-top: 30px
       padding: 0 50px
       display: flex
-      flex-direction: row-reverse
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-start
 
       +mobile
         padding: 0 20px
@@ -190,7 +334,7 @@ export default {
       margin-top: 30px
       padding: 0 50px
       display: grid
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
+      grid-template-columns: repeat(auto-fill, 140px)
       grid-gap: 15px
 
       +mobile
@@ -249,7 +393,7 @@ export default {
             li
               float: left
               padding: 3px
-              border-radius: 5px
+              border-radius: 2px
 
               +mobile
                 border-radius: 2px
@@ -286,7 +430,7 @@ export default {
 
             &.time
               font-size: 10px
-              border-radius: 5px
+              border-radius: 2px
               padding: 2px 5px
               align-self: flex-start
 
@@ -296,16 +440,17 @@ export default {
                 font-size: 8px
 
             &[data-time="4am-9pm"]
-              background-color: lemonchiffon
+              background-color: #AED6F1
             &[data-time="9am-4pm"]
-              background-color: lavender
+              background-color: #76D7C4
             &[data-time="4pm-9am"]
-              background-color: moccasin
+              background-color: #DC7633
+              color: white
             &[data-time="9pm-4am"]
-              background-color: darkslateblue
+              background-color: #34495E
               color: white
             &[data-time="AllDay"]
-              background-color: darkseagreen
+              background-color: #2E4053
               color: white
 
           +mobile
@@ -330,9 +475,9 @@ export default {
             border-radius: 5px
 
             &.north
-              background-color: mistyrose
+              background-color: #D1F2EB
             &.south
-              background-color: aliceblue
+              background-color: #FCF3CF
 
             p
               margin-top: 0
@@ -342,18 +487,34 @@ export default {
               list-style-type: none
               padding: 0
               margin: 2px 0 0
-              display: flex
-              flex-flow: row wrap
-              transform: translateY(-2px)
+              display: grid
+              grid-template-columns: repeat(12, 1fr)
+              border-radius: 2px
+              align-items: strech
+              justify-items: stretch
+
+              +mobile
+                grid-template-columns: repeat(6, 1fr)
+
+              &.allmonths
+                li
+                  opacity: 1
 
             li
               line-height: 1
-              font-size: 12px
+              font-size: 11px
               padding: 2px
               border-radius: 2px
-              background-color: rgba(255,255,255,0.7)
-              margin-left: 2px
-              margin-top: 2px
+              background-color: white
+              opacity: 0.2
+              font-family: "Share Tech Mono", monospace;
+              text-align: center
+
+              &.active
+                opacity: 1
+
+                & + li.active
+
 
               +mobile
                 font-size: 8px
@@ -370,4 +531,61 @@ export default {
 
       +mobile
         padding: 0 20px
+
+    #filter-wrapper
+      display: flex
+      flex-flow: row wrap
+      padding: 10px 20px
+      background-color: $white
+      border-radius: 7px
+      border: 0
+      box-shadow: 0 5px 0 $grey-l
+      font-family: "Share Tech Mono", sans-serif
+      transition: all 100ms
+      font-size: 14px
+
+      +mobile
+        padding: 5px 10px
+        font-size: 10px
+        margin-right: 50px
+
+      .filter-container
+        & + .filter-container
+          margin-left: 20px
+          +mobile
+            margin-left: 0
+            margin-top: 10px
+
+        .filters
+          margin-top: 10px
+          display: flex
+          flex-flow: row wrap
+          +mobile
+            transform: translate(-5px, -5px)
+
+          label
+            position: relative
+            cursor: pointer
+            +mobile
+              margin-left: 5px
+              margin-top: 5px
+
+            & + label
+              margin-left: 5px
+
+            span
+              padding: 2px 4px
+              display: block
+              border-radius: 2px
+              border: 1px solid black
+              opacity: 0.2
+              transition: all 100ms ease-in-out
+
+            input
+              visibility: hidden
+              position: absolute
+
+              &:checked + span
+                opacity: 1
+
 </style>
