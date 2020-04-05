@@ -241,7 +241,7 @@ export default {
               &[data-time="4am-9pm"]
                 background-color: lemonchiffon
               &[data-time="9am-4pm"]
-                background-color: aliceblue
+                background-color: lavender
               &[data-time="4pm-9am"]
                 background-color: moccasin
               &[data-time="9pm-4am"]
@@ -276,7 +276,7 @@ export default {
             &[data-time="4am-9pm"]
               background-color: lemonchiffon
             &[data-time="9am-4pm"]
-              background-color: aliceblue
+              background-color: lavender
             &[data-time="4pm-9am"]
               background-color: moccasin
             &[data-time="9pm-4am"]
