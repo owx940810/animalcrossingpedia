@@ -28,7 +28,11 @@
 
         .desc
           .image(:style="{backgroundImage: 'url(' + require('../assets/fishes/' + item.image) + ')'}")
-          p {{ item.name }}
+          p(v-show="sort.index === 0") #[b {{ item.name }}]
+          p(v-show="sort.index !== 0") {{ item.name }}
+          p(v-show="sort.index !== 1") ${{ item.price }}
+          p(v-show="sort.index !== 2") {{ item.location }} #[span.extra {{ item.location_extra }}]
+          p.time(v-show="sort.index !== 3", :data-time="item.time.split(' ').join('')") {{ item.time }}
 
 
 
@@ -262,6 +266,25 @@ export default {
             margin-top: 4px
             +mobile
               font-size: 8px
+
+            &.time
+              font-size: 10px
+              border-radius: 5px
+              padding: 2px 5px
+              align-self: flex-start
+
+            &[data-time="4am-9pm"]
+              background-color: lemonchiffon
+            &[data-time="9am-4pm"]
+              background-color: aliceblue
+            &[data-time="4pm-9am"]
+              background-color: moccasin
+            &[data-time="9pm-4am"]
+              background-color: darkslateblue
+              color: white
+            &[data-time="AllDay"]
+              background-color: darkseagreen
+              color: white
 
           +mobile
             border-radius: 0 0 7px 7px
