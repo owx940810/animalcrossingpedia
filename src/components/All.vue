@@ -344,6 +344,7 @@ export default {
               margin: 2px 0 0
               display: flex
               flex-flow: row wrap
+              transform: translateY(-2px)
 
             li
               line-height: 1
@@ -352,13 +353,10 @@ export default {
               border-radius: 2px
               background-color: rgba(255,255,255,0.7)
               margin-left: 2px
+              margin-top: 2px
+
               +mobile
                 font-size: 8px
-                &:nth-child(n+4)
-                  margin-top: 2px
-
-              &:nth-child(n+5)
-                margin-top: 2px
 
 
 
