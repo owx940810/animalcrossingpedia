@@ -163,55 +163,40 @@
       }
     },
 
-    // watch: {
-    //   "filterProperties.hemisphere": {
-    //     handler (val) {
-    //       gtag('event', 'button', {
-    //         'event_category': 'filter single hemisphere',
-    //         'event_label': val.join(', ')
-    //       })
+    watch: {
+      'filterProperties.hemisphere': {
+        handler (val) {
+          if (val.length > 1) {
+            gtag('event', 'filter multiple', {
+              category: 'hemisphere',
+              value: val.join(', ')
+            })
+          }
+        }
+      },
 
-    //       if (val.length > 1) {
-    //         gtag('event', 'button', {
-    //           'event_category': 'filter multiple hemispheres',
-    //           'event_label': val.join(', ')
-    //         })
-    //       }
-    //     }
-    //   },
+      'filterProperties.months': {
+        handler (val) {
+          if (val.length > 1) {
+            gtag('event', 'filter multiple', {
+              category: 'month',
+              value: val.join(', ')
+            })
+          }
+        }
+      },
 
-    //   "filterProperties.months": {
-    //     handler (val) {
-    //       gtag('event', 'button', {
-    //         'event_category': 'filter single month',
-    //         'event_label': val.join(', ')
-    //       })
-
-    //       if (val.length > 1) {
-    //         gtag('event', 'button', {
-    //           'event_category': 'filter multiple months',
-    //           'event_label': val.join(', ')
-    //         })
-    //       }
-    //     }
-    //   },
-
-    //   "filterProperties.location": {
-    //     handler (val) {
-    //       gtag('event', 'button', {
-    //         'event_category': 'filter single location',
-    //         'event_label': val.join(', ')
-    //       })
-
-    //       if (val.length > 1) {
-    //         gtag('event', 'button', {
-    //           'event_category': 'filter multiple locations',
-    //           'event_label': val.join(', ')
-    //         })
-    //       }
-    //     }
-    //   }
-    // },
+      'filterProperties.location': {
+        handler (val) {
+          if (val.length > 1) {
+            gtag('event', 'filter multiple', {
+              category: 'location',
+              value: val.join(', ')
+            })
+          }
+        }
+      }
+    },
 
     computed: {
       filteredItems () {
@@ -287,9 +272,9 @@
 
     methods: {
       gtagging (category, val) {
-        gtag('event', 'button', {
-          'event_category': `filter ${category}`,
-          'event_label': val
+        gtag('event', 'filter', {
+          category: category,
+          value: val
         })
       },
 
@@ -324,6 +309,11 @@
         if (this.sort.index >= this.sort.type.length) {
           this.sort.index = 0
         }
+
+        gtag('event', 'sort', {
+          'value': this.sort.type[this.sort.index]
+        })
+
         window.localStorage.setItem('sort', this.sort.index)
       },
 
