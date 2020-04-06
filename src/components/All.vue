@@ -393,18 +393,18 @@
       margin-top: 30px
       padding: 0 50px
       display: grid
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr))
-      grid-gap: 15px
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))
+      grid-gap: 25px
 
       +mobile
         padding: 0 20px
         display: grid
-        grid-template-columns: repeat(3, minmax(60px, 1fr))
+        grid-template-columns: repeat(2, minmax(60px, 1fr))
 
       .item
         position: relative
         // cursor: pointer
-        transition: all 100ms
+        transition: all $speed-very-fast
         display: flex
         flex-flow: column nowrap
 
@@ -424,24 +424,14 @@
         p
           text-align: left
           margin: 0
-          font-size: 12px
-
-          +mobile
-            font-size: 8px
 
         .number
           border-radius: 7px 7px 0 0
           background-color: $white
-          padding: 4px 5px 0 5px
+          padding: 5px 5px 0 5px
 
           +mobile
             width: 100%
-
-          .extra
-            font-size: 10px
-
-            +mobile
-              font-size: 8px
 
           ul.time
             +clearlist
@@ -459,17 +449,17 @@
                 padding: 2px
 
               &[data-time="4am-9pm"]
-                background-color: lemonchiffon
+                background-color: #AED6F1
               &[data-time="9am-4pm"]
-                background-color: lavender
+                background-color: #76D7C4
               &[data-time="4pm-9am"]
-                background-color: moccasin
+                background-color: #DC7633
+                color: white
               &[data-time="9pm-4am"]
-                background-color: darkslateblue
+                background-color: #34495E
                 color: white
               &[data-time="AllDay"]
-                background-color: darkseagreen
-                color: white
+                background-color: #e6e6e6
 
         .desc
           width: 100%
@@ -480,23 +470,19 @@
           padding: 5px
           display: flex
           flex-flow: column nowrap
-          transition: all 100ms
+          transition: all $speed-very-fast
 
           p
             margin-top: 4px
-            +mobile
-              font-size: 8px
 
             &.time
-              font-size: 10px
               border-radius: 2px
-              padding: 2px 5px
+              padding: 3px 5px
               align-self: flex-start
 
               +mobile
                 padding: 2px
                 border-radius: 2px
-                font-size: 8px
 
             &[data-time="4am-9pm"]
               background-color: #AED6F1
@@ -509,8 +495,7 @@
               background-color: #34495E
               color: white
             &[data-time="AllDay"]
-              background-color: #2E4053
-              color: white
+              background-color: #e6e6e6
 
           +mobile
             border-radius: 0 0 7px 7px
@@ -561,8 +546,7 @@
 
             li
               line-height: 1
-              font-size: 11px
-              padding: 2px
+              padding: 3px
               border-radius: 2px
               background-color: white
               opacity: 0.2
@@ -573,12 +557,6 @@
                 opacity: 1
 
                 & + li.active
-
-
-              +mobile
-                font-size: 8px
-
-
 
     .favorites
       margin-top: 20px
