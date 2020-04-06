@@ -16,66 +16,66 @@
             p HEMISPHERE:
             .filters
               label
-                input(type="checkbox" value="north" v-model="filterProperties.hemisphere")
+                input(type="checkbox" value="north" v-model="filterProperties.hemisphere" @click="gtagging('hemisphere', 'north')")
                 span north
               label
-                input(type="checkbox" value="south" v-model="filterProperties.hemisphere")
+                input(type="checkbox" value="south" v-model="filterProperties.hemisphere" @click="gtagging('hemisphere', 'south')")
                 span south
 
           .filter-container
             p MONTHS:
             .filters
               label
-                input(type="checkbox" value="January" v-model="filterProperties.months")
+                input(type="checkbox" value="January" v-model="filterProperties.months" @click="gtagging('month', 'january')")
                 span Jan
               label
-                input(type="checkbox" value="February" v-model="filterProperties.months")
+                input(type="checkbox" value="February" v-model="filterProperties.months" @click="gtagging('month', 'february')")
                 span Feb
               label
-                input(type="checkbox" value="March" v-model="filterProperties.months")
+                input(type="checkbox" value="March" v-model="filterProperties.months" @click="gtagging('month', 'march')")
                 span Mar
               label
-                input(type="checkbox" value="April" v-model="filterProperties.months")
+                input(type="checkbox" value="April" v-model="filterProperties.months" @click="gtagging('month', 'april')")
                 span Apr
               label
-                input(type="checkbox" value="May" v-model="filterProperties.months")
+                input(type="checkbox" value="May" v-model="filterProperties.months" @click="gtagging('month', 'may')")
                 span May
               label
-                input(type="checkbox" value="June" v-model="filterProperties.months")
+                input(type="checkbox" value="June" v-model="filterProperties.months" @click="gtagging('month', 'june')")
                 span Jun
               label
-                input(type="checkbox" value="July" v-model="filterProperties.months")
+                input(type="checkbox" value="July" v-model="filterProperties.months" @click="gtagging('month', 'july')")
                 span Jul
               label
-                input(type="checkbox" value="August" v-model="filterProperties.months")
+                input(type="checkbox" value="August" v-model="filterProperties.months" @click="gtagging('month', 'august')")
                 span Aug
               label
-                input(type="checkbox" value="September" v-model="filterProperties.months")
+                input(type="checkbox" value="September" v-model="filterProperties.months" @click="gtagging('month', 'september')")
                 span Sep
               label
-                input(type="checkbox" value="October" v-model="filterProperties.months")
+                input(type="checkbox" value="October" v-model="filterProperties.months" @click="gtagging('month', 'october')")
                 span Oct
               label
-                input(type="checkbox" value="November" v-model="filterProperties.months")
+                input(type="checkbox" value="November" v-model="filterProperties.months" @click="gtagging('month', 'november')")
                 span Nov
               label
-                input(type="checkbox" value="December" v-model="filterProperties.months")
+                input(type="checkbox" value="December" v-model="filterProperties.months" @click="gtagging('month', 'december')")
                 span Dec
 
           .filter-container
             p LOCATION:
             .filters
               label
-                input(type="checkbox" value="River" v-model="filterProperties.location")
+                input(type="checkbox" value="River" v-model="filterProperties.location" @click="gtagging('location', 'river')")
                 span river
               label
-                input(type="checkbox" value="Pond" v-model="filterProperties.location")
+                input(type="checkbox" value="Pond" v-model="filterProperties.location" @click="gtagging('location', 'pond')")
                 span pond
               label
-                input(type="checkbox" value="Sea" v-model="filterProperties.location")
+                input(type="checkbox" value="Sea" v-model="filterProperties.location" @click="gtagging('location', 'sea')")
                 span sea
               label
-                input(type="checkbox" value="Pier" v-model="filterProperties.location")
+                input(type="checkbox" value="Pier" v-model="filterProperties.location" @click="gtagging('location', 'pier')")
                 span pier
 
     hr
@@ -87,7 +87,7 @@
       button.default(@click="changeSort") SORT BY#[br]#[hr]{{ sort.type[sort.index].toLocaleUpperCase() }}
 
     .all
-      .item(v-for="item in selecteditems", @click="selectItem(item)", :class="{rounded: sort.index === 0}")
+      .item(v-for="item in selecteditems", :class="{rounded: sort.index === 0}")
         .number(v-show="sort.index !== 0")
           p(v-show="sort.index === 1")
             b(v-show="item.price") #[span $]{{ item.price }}
@@ -102,7 +102,7 @@
           p(v-show="sort.index === 0") #[b {{ item.name }}]
           p(v-show="sort.index !== 0") {{ item.name }}
           p(v-show="sort.index !== 1") ${{ item.price }}
-          p(v-show="sort.index !== 2") {{ item.location }} #[span.extra {{ item.location_extra }}]
+          p(v-show="sort.index !== 2") {{ item.location }} #[span.extra(v-show="item.location_extra") ({{ item.location_extra }})]
           p.time(v-show="sort.index !== 3", :data-time="item.time.split(' ').join('')") {{ item.time }}
           .months.north(v-show="sort.index !== 4")
             p north:
@@ -161,6 +161,56 @@
         }
       }
     },
+
+    // watch: {
+    //   "filterProperties.hemisphere": {
+    //     handler (val) {
+    //       gtag('event', 'button', {
+    //         'event_category': 'filter single hemisphere',
+    //         'event_label': val.join(', ')
+    //       })
+
+    //       if (val.length > 1) {
+    //         gtag('event', 'button', {
+    //           'event_category': 'filter multiple hemispheres',
+    //           'event_label': val.join(', ')
+    //         })
+    //       }
+    //     }
+    //   },
+
+    //   "filterProperties.months": {
+    //     handler (val) {
+    //       gtag('event', 'button', {
+    //         'event_category': 'filter single month',
+    //         'event_label': val.join(', ')
+    //       })
+
+    //       if (val.length > 1) {
+    //         gtag('event', 'button', {
+    //           'event_category': 'filter multiple months',
+    //           'event_label': val.join(', ')
+    //         })
+    //       }
+    //     }
+    //   },
+
+    //   "filterProperties.location": {
+    //     handler (val) {
+    //       gtag('event', 'button', {
+    //         'event_category': 'filter single location',
+    //         'event_label': val.join(', ')
+    //       })
+
+    //       if (val.length > 1) {
+    //         gtag('event', 'button', {
+    //           'event_category': 'filter multiple locations',
+    //           'event_label': val.join(', ')
+    //         })
+    //       }
+    //     }
+    //   }
+    // },
 
     computed: {
       filteredItems () {
@@ -230,16 +280,18 @@
     },
 
     mounted () {
-      // gtag('config', 'UA-93111170-3', {
-      //   'page_title': 'landing',
-      //   'page_path': '/'
-      // })
-
       this.getSortType()
       this.getFavorites()
     },
 
     methods: {
+      gtagging (category, val) {
+        gtag('event', 'button', {
+          'event_category': `filter ${category}`,
+          'event_label': val
+        })
+      },
+
       selectItem (item) {
         gtag('event', 'button', {
           'event_category': 'selectitem',
