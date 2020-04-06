@@ -8,7 +8,8 @@
     //-         img(:src="item.image" )
     //-         P {{ item.name }}
 
-    #filter-wrapper
+    #filter-wrapper(:class="{active: filterDropdownState}")
+      button.dropdown(@click="toggleFilterDropdown")
       .wrapper
         p FILTERS
         .filter-containers
@@ -158,7 +159,8 @@
         sort: {
           type: ['name', 'price', 'location', 'time'],
           index: 0
-        }
+        },
+        filterDropdownState: false
       }
     },
 
@@ -326,8 +328,12 @@
         window.localStorage.setItem('sort', this.sort.index)
       },
 
-      filterHemisphere () {
-
+      toggleFilterDropdown () {
+        if (!this.filterDropdownState) {
+          gtag('event', 'filter')
+        }
+        this.filterDropdownState = !this.filterDropdownState
+        console.log(this.filterDropdownState)
       }
     }
   }
@@ -586,28 +592,59 @@
         padding: 0 20px
 
     #filter-wrapper
-      margin-top: 30px
-      padding: 0 50px
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 1
       font-family: "Share Tech Mono", sans-serif
-      font-size: 14px
+      width: 100%
+      box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.3)
 
-      +mobile
-        padding: 0 20px
-        font-size: 10px
+      &.active
+        .dropdown
+          transform: rotate(-180deg)
+
+        .filter-containers
+          top: 100%
+          left: 0
+          opacity: 1
+          transform: translateY(0)
+          transition: transform $speed-very-fast ease-in-out, opacity $speed-fast ease-in-out
+
+      button.dropdown
+        background-color: white
+        border: 0
+        position: absolute
+        top: 9px
+        right: 20px
+        background-image: url("../assets/feather/chevron-down.svg")
+        background-size: contain
+        background-repeat: no-repeat
+        transition: all $speed-fast ease-in-out
+        width: 24px
+        height: 24px
 
       .wrapper
-        padding: 10px 20px
+        padding: 15px 20px
         background-color: $white
-        border-radius: 7px
-        border: 0
-        box-shadow: 0 5px 0 $grey-l
-        transition: all 100ms
 
     .filter-containers
-      margin-top: 20px
+      width: 100%
       display: flex
       flex-flow: row wrap
       justify-content: space-between
+      opacity: 0
+      transform: translateY(-100px)
+      transition: transform $speed-normal ease-in-out, opacity $speed-fast ease-in-out, top 0ms $speed-normal, left 0ms $speed-normal
+      border-radius: 0 0 7px 7px
+      border: 0
+      box-shadow: 0 5px 0 $grey-l
+      background-color: white
+      padding: 20px
+      position: absolute
+      top: 0
+      left: 100%
+      z-index: -1
 
       .filter-container
         & + .filter-container
@@ -639,7 +676,7 @@
               border-radius: 2px
               border: 1px solid black
               opacity: 0.2
-              transition: all 100ms ease-in-out
+              transition: all $speed-very-fast ease-in-out
 
             input
               visibility: hidden
