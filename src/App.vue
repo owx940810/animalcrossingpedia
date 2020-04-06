@@ -5,11 +5,12 @@
     img#logo(alt="Animal Crossing logo" src="./assets/animal-crossing-logo-700px.png")
     All(:all="all")
     footer
-      //- p built by Calvin Ong | #[a(href="https://redd.it/8z14wf") reddit ]| #[a(href="https://calvinong.dev/", target="_blank") calvinong.dev]
-      p built by #[a(href="https://calvinong.dev/", target="_blank") Calvin Ong] | #[a(href="https://github.com/owx940810/animalcrossingpedia", target="_blank") Github]
+      p built by Calvin Ong
       p.
         Credits:
-        #[a(href="https://www.ign.com/wikis/animal-crossing-new-horizons/Fish_Guide:_Fish_List,_Sell_Price,_and_Fishing_Tips" target="_blank") IGN]
+        #[a(href="https://www.ign.com/wikis/animal-crossing-new-horizons/Fish_Guide:_Fish_List,_Sell_Price,_and_Fishing_Tips" target="_blank") IGN] |
+        #[a(href="https://www.polygon.com/animal-crossing-new-horizons-switch-acnh-guide/2020/3/23/21190775/fish-locations-times-month-day-list-critterpedia" target="_blank") Polygon] |
+        #[a(href="https://animalcrossing.fandom.com/wiki/Fish_(New_Horizons)" target="_blank") Fandom] |
 </template>
 
 <script>
