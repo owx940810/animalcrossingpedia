@@ -99,9 +99,8 @@
               p #[b #[span ] {{ item.time }}]
 
         .desc
-          .image(:style="{backgroundImage: 'url(' + require('../assets/fishes/' + item.image) + ')'}")
-          p(v-show="sort.index === 0") #[b {{ item.name }}]
-          p(v-show="sort.index !== 0") {{ item.name }}
+          .image(:style="{backgroundImage: 'url(' + require('../assets/fishes/icon/' + item.image) + ')'}")
+          p #[b {{ item.name }}]
           p(v-show="sort.index !== 1") ${{ item.price }}
           p(v-show="sort.index !== 2") {{ item.location }} #[span.extra(v-show="item.location_extra") ({{ item.location_extra }})]
           p.time(v-show="sort.index !== 3", :data-time="item.time.split(' ').join('')") {{ item.time }}
