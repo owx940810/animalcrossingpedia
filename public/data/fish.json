@@ -13,64 +13,64 @@
         "price": 160,
         "location": "River",
         "time": "9am - 4pm",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Crucian Carp",
         "image": "crucian_carp.png",
         "price": 160,
         "location": "River",
         "time": "All Day",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Dace",
         "image": "dace.png",
         "price": 240,
         "location": "River",
         "time": "4pm - 9am",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Carp",
         "image": "carp.png",
         "price": 300,
         "location": "Pond",
         "time": "All Day",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Koi",
         "image": "koi.png",
         "price": 4000,
         "location": "Pond",
         "time": "4pm - 9am",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Goldfish",
         "image": "goldfish.png",
         "price": 1300,
         "location": "Pond",
         "time": "All Day",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Pop-eyed Goldfish",
         "image": "popeyed_goldfish.png",
         "price": 1300,
         "location": "Pond",
         "time": "9am - 4pm",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Ranchu Goldfish",
         "image": "ranchu_goldfish.png",
         "price": 4500,
         "location": "Pond",
         "time": "9am - 4pm",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Killifish",
         "image": "killifish.png",
@@ -125,8 +125,8 @@
         "price": 400,
         "location": "River",
         "time": "4pm - 9am",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Loach",
         "image": "loach.png",
@@ -157,8 +157,8 @@
         "price": 180,
         "location": "River",
         "time": "9am - 4pm",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Yellow Perch",
         "image": "yellow_perch.png",
@@ -173,8 +173,8 @@
         "price": 400,
         "location": "River",
         "time": "All Day",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Tilapia",
         "image": "tilapia.png",
@@ -452,16 +452,16 @@
         "price": 200,
         "location": "Sea",
         "time": "4am - 9pm",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Horse Mackerel",
         "image": "horse_mackerel.png",
         "price": 150,
         "location": "Sea",
         "time": "All Day",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Barred Knifejaw",
         "image": "barred_knifejaw.png",
@@ -476,16 +476,16 @@
         "price": 400,
         "location": "Sea",
         "time": "All Day",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Red Snapper",
         "image": "red_snapper.png",
         "price": 3000,
         "location": "Sea",
         "time": "All Day",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Dab",
         "image": "dab.png",
@@ -500,8 +500,8 @@
         "price": 800,
         "location": "Sea",
         "time": "All Day",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Squid",
         "image": "squid.png",
@@ -549,7 +549,7 @@
         "location": "Pier",
         "time": "All Day",
         "north": "May, June, July, August, September",
-        "south": "November, December, January, February, March"
+        "south": "November, December, January, February, March, April"
     }, {
         "name": "Mahi-mahi",
         "image": "mahi_mahi.png",
@@ -636,8 +636,8 @@
         "price": 15000,
         "location": "Sea",
         "time": "9pm - 4am",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Coelacanth",
         "image": "coelacanth.png",
@@ -645,7 +645,7 @@
         "location": "Sea",
         "location_extra": "Rainy Days",
         "time": "All Day",
-        "north": "All Months",
-        "south": "All Months"
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
     }
 ]
