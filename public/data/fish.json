@@ -10,7 +10,7 @@
         "shadow": "1"
     }, {
         "name": "Pale Chub",
-        "image": "pale_chub.png",
+        "image": "palechub.png",
         "price": 160,
         "location": "River",
         "time": "9am - 4pm",
@@ -19,7 +19,7 @@
         "shadow": "1"
     }, {
         "name": "Crucian Carp",
-        "image": "crucian_carp.png",
+        "image": "cruciancarp.png",
         "price": 160,
         "location": "River",
         "time": "All Day",
@@ -64,7 +64,7 @@
         "shadow": "1"
     }, {
         "name": "Popeyed Goldfish",
-        "image": "popeyed_goldfish.png",
+        "image": "popeyedgoldfish.png",
         "price": 1300,
         "location": "Pond",
         "time": "9am - 4pm",
@@ -73,7 +73,7 @@
         "shadow": "1"
     }, {
         "name": "Ranchu Goldfish",
-        "image": "ranchu_goldfish.png",
+        "image": "ranchugoldfish.png",
         "price": 4500,
         "location": "Pond",
         "time": "9am - 4pm",
@@ -100,7 +100,7 @@
         "shadow": "2"
     }, {
         "name": "Soft-shelled Turtle",
-        "image": "soft_shelled_turtle.png",
+        "image": "softshelledturtle.png",
         "price": 3750,
         "location": "River",
         "time": "4pm - 9am",
@@ -109,7 +109,7 @@
         "shadow": "4"
     }, {
         "name": "Snapping Turtle",
-        "image": "snapping_turtle.png",
+        "image": "snappingturtle.png",
         "price": 5000,
         "location": "River",
         "time": "9pm - 4am",
@@ -136,7 +136,7 @@
         "shadow": "2"
     }, {
         "name": "Freshwater Goby",
-        "image": "freshwater_goby.png",
+        "image": "freshwatergoby.png",
         "price": 400,
         "location": "River",
         "time": "4pm - 9am",
@@ -163,7 +163,7 @@
         "shadow": "4"
     }, {
         "name": "Giant Snakehead",
-        "image": "giant_snakehead.png",
+        "image": "giantsnakehead.png",
         "price": 0,
         "location": "Pond",
         "time": "9am - 4pm",
@@ -181,7 +181,7 @@
         "shadow": "2"
     }, {
         "name": "Yellow Perch",
-        "image": "yellow_perch.png",
+        "image": "yellowperch.png",
         "price": 300,
         "location": "River",
         "time": "All Day",
@@ -190,7 +190,7 @@
         "shadow": "3"
     }, {
         "name": "Black Bass",
-        "image": "black_bass.png",
+        "image": "blackbass.png",
         "price": 400,
         "location": "River",
         "time": "All Day",
@@ -217,7 +217,7 @@
         "shadow": "5"
     }, {
         "name": "Pond Smelt",
-        "image": "pond_smelt.png",
+        "image": "pondsmelt.png",
         "price": 0,
         "location": "River",
         "time": "All Day",
@@ -235,7 +235,7 @@
         "shadow": "3"
     }, {
         "name": "Cherry Salmon",
-        "image": "cherry_salmon.png",
+        "image": "cherrysalmon.png",
         "price": 1000,
         "location": "River",
         "location_extra": "Clifftop",
@@ -255,7 +255,7 @@
         "shadow": "3"
     }, {
         "name": "Golden Trout",
-        "image": "golden_trout.png",
+        "image": "goldentrout.png",
         "price": 15000,
         "location": "River",
         "location_extra": "Clifftop",
@@ -285,7 +285,7 @@
         "shadow": "4"
     }, {
         "name": "King Salmon",
-        "image": "king_salmon.png",
+        "image": "kingsalmon.png",
         "price": 1800,
         "location": "River",
         "location_extra": "Mouth",
@@ -295,7 +295,7 @@
         "shadow": "6"
     }, {
         "name": "Mitten Crab",
-        "image": "mitten_crab.png",
+        "image": "mittencrab.png",
         "price": 2000,
         "location": "River",
         "time": "4pm - 9am",
@@ -313,7 +313,7 @@
         "shadow": "1"
     }, {
         "name": "Nibble Fish",
-        "image": "nibble_fish.png",
+        "image": "nibblefish.png",
         "price": 1500,
         "location": "River",
         "time": "9am - 4pm",
@@ -340,7 +340,7 @@
         "shadow": "2"
     }, {
         "name": "Neon Tetra",
-        "image": "neon_tetra.png",
+        "image": "neontetra.png",
         "price": 500,
         "location": "River",
         "time": "9am - 4pm",
@@ -403,7 +403,7 @@
         "shadow": "6"
     }, {
         "name": "Saddled Bichir",
-        "image": "saddled_bichir.png",
+        "image": "saddledbichir.png",
         "price": 4000,
         "location": "River",
         "time": "9pm - 4am",
@@ -422,7 +422,7 @@
         "shadow": "6"
     }, {
         "name": "Sea Butterfly",
-        "image": "sea_butterfly.png",
+        "image": "seabutterfly.png",
         "price": 1000,
         "location": "Sea",
         "time": "All Day",
@@ -458,7 +458,7 @@
         "shadow": "2"
     }, {
         "name": "Butterfly Fish",
-        "image": "butterfly_fish.png",
+        "image": "butterflyfish.png",
         "price": 1000,
         "location": "Sea",
         "time": "All Day",
@@ -476,7 +476,7 @@
         "shadow": "6"
     }, {
         "name": "Zebra Turkeyfish",
-        "image": "zebra_turkeyfish.png",
+        "image": "zebraturkeyfish.png",
         "price": 500,
         "location": "Sea",
         "time": "All Day",
@@ -494,7 +494,7 @@
         "shadow": "3"
     }, {
         "name": "Puffer Fish",
-        "image": "puffer_fish.png",
+        "image": "pufferfish.png",
         "price": 250,
         "location": "Sea",
         "time": "All Day",
@@ -512,7 +512,7 @@
         "shadow": "2"
     }, {
         "name": "Horse Mackerel",
-        "image": "horse_mackerel.png",
+        "image": "horsemackerel.png",
         "price": 150,
         "location": "Sea",
         "time": "All Day",
@@ -521,7 +521,7 @@
         "shadow": "2"
     }, {
         "name": "Barred Knifejaw",
-        "image": "barred_knifejaw.png",
+        "image": "barredknifejaw.png",
         "price": 5000,
         "location": "Sea",
         "time": "All Day",
@@ -530,7 +530,7 @@
         "shadow": "3"
     }, {
         "name": "Sea Bass",
-        "image": "sea_bass.png",
+        "image": "seabass.png",
         "price": 400,
         "location": "Sea",
         "time": "All Day",
@@ -539,7 +539,7 @@
         "shadow": "5"
     }, {
         "name": "Red Snapper",
-        "image": "red_snapper.png",
+        "image": "redsnapper.png",
         "price": 3000,
         "location": "Sea",
         "time": "All Day",
@@ -557,7 +557,7 @@
         "shadow": "3"
     }, {
         "name": "Olive Flounder",
-        "image": "olive_flounder.png",
+        "image": "oliveflounder.png",
         "price": 800,
         "location": "Sea",
         "time": "All Day",
@@ -575,7 +575,7 @@
         "shadow": "3"
     }, {
         "name": "Moray Eel",
-        "image": "moray_eel.png",
+        "image": "morayeel.png",
         "price": 2000,
         "location": "Sea",
         "time": "All Day",
@@ -584,7 +584,7 @@
         "shadow": "Narrow"
     }, {
         "name": "Ribbon Eel",
-        "image": "ribbon_eel.png",
+        "image": "ribboneel.png",
         "price": 600,
         "location": "Sea",
         "time": "All Day",
@@ -602,7 +602,7 @@
         "shadow": "6"
     }, {
         "name": "Blue Marlin",
-        "image": "blue_marlin.png",
+        "image": "bluemarlin.png",
         "price": 10000,
         "location": "Pier",
         "time": "All Day",
@@ -611,7 +611,7 @@
         "shadow": "6"
     }, {
         "name": "Giant Trevally",
-        "image": "giant_trevally.png",
+        "image": "gianttrevally.png",
         "price": 4500,
         "location": "Pier",
         "time": "All Day",
@@ -620,7 +620,7 @@
         "shadow": "5"
     }, {
         "name": "Mahi-mahi",
-        "image": "mahi_mahi.png",
+        "image": "mahimahi.png",
         "price": 6000,
         "location": "Pier",
         "time": "All Day",
@@ -629,7 +629,7 @@
         "shadow": "5"
     }, {
         "name": "Ocean Sunfish",
-        "image": "ocean_sunfish.png",
+        "image": "oceansunfish.png",
         "price": 4000,
         "location": "Sea",
         "time": "4am - 9pm",
@@ -647,7 +647,7 @@
         "shadow": "5"
     }, {
         "name": "Saw Shark",
-        "image": "saw_shark.png",
+        "image": "sawshark.png",
         "price": 12000,
         "location": "Sea",
         "time": "4pm - 9am",
@@ -656,7 +656,7 @@
         "shadow": "6 (fin)"
     }, {
         "name": "Hammerhead Shark",
-        "image": "hammerhead_shark.png",
+        "image": "hammerheadshark.png",
         "price": 8000,
         "location": "Sea",
         "time": "4pm - 9am",
@@ -665,7 +665,7 @@
         "shadow": "6 (fin)"
     }, {
         "name": "Great White Shark",
-        "image": "great_white_shark.png",
+        "image": "greatwhiteshark.png",
         "price": 15000,
         "location": "Sea",
         "time": "4pm - 9am",
@@ -674,7 +674,7 @@
         "shadow": "6 (fin)"
     }, {
         "name": "Whale Shark",
-        "image": "whale_shark.png",
+        "image": "whaleshark.png",
         "price": 13000,
         "location": "Sea",
         "time": "All Day",
@@ -692,7 +692,7 @@
         "shadow": "4 (fin)"
     }, {
         "name": "Football Fish",
-        "image": "football_fish.png",
+        "image": "footballfish.png",
         "price": 2500,
         "location": "Sea",
         "time": "4pm - 9am",
