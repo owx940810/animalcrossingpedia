@@ -368,6 +368,7 @@
         right: 10px
         top: 50%
         transform: translateY(-50%)
+        background-image: url("../assets/feather/search.svg")
         opacity: 0.8
 
       input
