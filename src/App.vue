@@ -57,6 +57,7 @@ export default {
 
     +mobile
       width: 150px
+
   #alert
     color: darkgrey
     background-color: #E6E6E6
@@ -64,6 +65,7 @@ export default {
     padding: 5px
     text-align: center
     font-style: italic
+    margin-top: 42px
 
   footer
     text-align: center
