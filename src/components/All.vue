@@ -350,7 +350,6 @@
         content: ""
         display: block
         position: absolute
-        z-index: 1
         width: 20px
         height: 20px
         background-size: contain
