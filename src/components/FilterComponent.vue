@@ -71,7 +71,7 @@
             span pier
 
       .break
-      button.apply-filter(@click="applyFilters") Apply Filter
+      button.apply-filter(@click="applyFilters") APPLY FILTER
 
 </template>
 
@@ -182,11 +182,11 @@ export default {
     font-family: "Share Tech Mono", sans-serif
     width: 100%
     box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.3)
-    cursor: pointer
 
     .title-wrapper
       padding: 15px 20px
       background-color: $white
+      cursor: pointer
 
       button.dropdown
         background-color: white
@@ -223,17 +223,25 @@ export default {
         flex-flow: column nowrap
 
       button.apply-filter
-        padding: 4px 8px
+        padding: 6px 8px
         display: block
         border-radius: 2px
-        border: 1px solid black
+        border: 0
         flex: 0 0 auto
         margin-top: 20px
         margin-left: auto
-        background-color: white
+        background-color: #1abc9c
+        color: white
+        font-family: "Share Tech Mono", monospace
+        transition: all $speed-very-fast
+        font-size: 16px
+
+        &:hover, &:focus, &:active
+          background-color: #16a085
 
         +mobile
           align-self: flex-end
+          font-size: 14px
 
       .filter-container
         margin-right: 20px
