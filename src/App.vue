@@ -9,7 +9,6 @@
     FilterComponent(:filterProperties="filterProperties")
 
     All(:all="all", @showOverlay="showOverlay", :filterProperties="filterProperties")
-    //- Overlay(v-if="overlayState", :selectedItem="selectedItem")
     footer
       p built by Calvin Ong
       p.
@@ -22,13 +21,12 @@
 <script>
 import All from './components/All.vue'
 import Favorites from './components/Favorites.vue'
-import Overlay from './components/Overlay.vue'
 import FilterComponent from './components/FilterComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    All, Favorites, Overlay, FilterComponent
+    All, Favorites, FilterComponent
   },
 
   data () {
