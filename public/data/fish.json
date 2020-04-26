@@ -581,7 +581,7 @@
         "time": "All Day",
         "north": "August, September, October",
         "south": "February, March, April",
-        "shadow": "Narrow"
+        "shadow": "Long"
     }, {
         "name": "Ribbon Eel",
         "image": "ribboneel.png",
@@ -590,7 +590,7 @@
         "time": "All Day",
         "north": "June, July, August, September, October",
         "south": "December, January, February, March, April",
-        "shadow": "Narrow"
+        "shadow": "Long"
     }, {
         "name": "Tuna",
         "image": "tuna.png",
