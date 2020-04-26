@@ -2,8 +2,14 @@
   #app
     #alert
       p bug list coming soon*
+
+
     img#logo(alt="Animal Crossing logo" src="./assets/animal-crossing-logo-700px.png")
-    All(:all="all")
+
+    FilterComponent(:filterProperties="filterProperties")
+
+    All(:all="all", @showOverlay="showOverlay", :filterProperties="filterProperties")
+    //- Overlay(v-if="overlayState", :selectedItem="selectedItem")
     footer
       p built by Calvin Ong
       p.
@@ -16,17 +22,26 @@
 <script>
 import All from './components/All.vue'
 import Favorites from './components/Favorites.vue'
+import Overlay from './components/Overlay.vue'
+import FilterComponent from './components/FilterComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    All, Favorites
+    All, Favorites, Overlay, FilterComponent
   },
 
   data () {
     return {
       all: [],
-      favorites: []
+      favorites: [],
+      overlayState: false,
+      selectedItem: null,
+      filterProperties: {
+        hemisphere: [],
+        months: [],
+        location: []
+      },
     }
   },
 
@@ -39,6 +54,18 @@ export default {
       return item
     })
     this.all = res
+  },
+
+  methods: {
+    showOverlay (item) {
+      this.overlayState = true
+      this.selectedItem = item
+    },
+
+    closeOverlay () {
+      this.overlayState = false
+      this.selectedItem = null
+    }
   }
 }
 </script>
