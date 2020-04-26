@@ -70,7 +70,8 @@
             input(type="checkbox" value="Pier" v-model="tempFilterProperties.location" @click="gtagging('location', 'pier')")
             span pier
 
-      button.default.apply-filter(@click="applyFilters") Apply Filter
+      .break
+      button.apply-filter(@click="applyFilters") Apply Filter
 
 </template>
 
@@ -135,7 +136,7 @@ export default {
   methods: {
     openFilterDropdown () {
       if (this.filterDropdownState) {
-        this.closeFilterDropdown
+        this.applyFilters()
         return
       }
       gtag('event', 'filter')
@@ -162,6 +163,8 @@ export default {
         event_category: 'button',
         event_label: 'Apply Filter'
       })
+
+      this.closeFilterDropdown()
     }
   }
 }
@@ -220,7 +223,15 @@ export default {
         flex-flow: column nowrap
 
       button.apply-filter
+        padding: 4px 8px
+        display: block
+        border-radius: 2px
+        border: 1px solid black
         flex: 0 0 auto
+        margin-top: 20px
+        margin-left: auto
+        background-color: white
+
         +mobile
           align-self: flex-end
 
@@ -232,7 +243,7 @@ export default {
           margin-right: 0
           margin-bottom: 0
 
-        &:last-child
+        &:nth-child(3)
           margin-right: 0
 
         & + .filter-container
@@ -282,4 +293,7 @@ export default {
         transform: translateY(0)
         transition: transform $speed-very-fast ease-in-out, opacity $speed-fast ease-in-out
 
+  .break
+    flex-basis: 100%
+    height: 0
 </style>
