@@ -96,8 +96,8 @@ export default {
     'tempFilterProperties.hemisphere': {
       handler (val) {
         if (val.length > 1) {
-          gtag('event', 'filter multiple', {
-            event_category: 'hemisphere',
+          gtag('event', 'filter multiple hemispheres', {
+            event_category: this.selectedType,
             event_label: val.join(', '),
             value: val.length
           })
@@ -108,8 +108,8 @@ export default {
     'tempFilterProperties.months': {
       handler (val) {
         if (val.length > 1) {
-          gtag('event', 'filter multiple', {
-            event_category: 'month',
+          gtag('event', 'filter multiple months', {
+            event_category: this.selectedType,
             event_label: val.join(', '),
             value: val.length
           })
@@ -120,8 +120,8 @@ export default {
     'tempFilterProperties.location': {
       handler (val) {
         if (val.length > 1) {
-          gtag('event', 'filter multiple', {
-            event_category: 'location',
+          gtag('event', 'filter multiple locations', {
+            event_category: this.selectedType,
             event_label: val.join(', '),
             value: val.length
           })
@@ -147,10 +147,10 @@ export default {
       this.filterDropdownState = false
     },
 
-    gtagging (category, val) {
-      gtag('event', 'filter', {
-        event_category: category,
-        event_label: val
+    gtagging (category, value) {
+      gtag('event', 'filter ' + category, {
+        event_category: this.selectedType,
+        event_label: value
       })
     },
 
@@ -160,7 +160,7 @@ export default {
       this.filterProperties.location = this.tempFilterProperties.location
 
       gtag('event', 'apply filter', {
-        event_category: 'button',
+        event_category: this.selectedType,
         event_label: 'Apply Filter'
       })
 

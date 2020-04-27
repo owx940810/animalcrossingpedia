@@ -140,7 +140,9 @@
         }
 
         gtag('event', 'sort', {
-          'value': this.sort.type[this.sort.index]
+          'event_category': 'sort by'
+          'event_label': this.sort.type[this.sort.index]
+          'value': this.sort.index
         })
 
         window.localStorage.setItem('sort', this.sort.index)

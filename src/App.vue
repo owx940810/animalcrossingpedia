@@ -105,6 +105,11 @@ export default {
         this.selectedType = "fishes"
       }
       window.localStorage.setItem('type', this.selectedType)
+
+      gtag('event', 'change type', {
+        'event_category': 'toggle',
+        'event_label': this.selectedType
+      })
     }
   }
 }
