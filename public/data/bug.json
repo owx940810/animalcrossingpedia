@@ -1,563 +1,643 @@
 [
     {
         "name": "Common Butterfly",
+        "image": "commonbutterfly.png",
         "price": 160,
         "location": "Above Flowers",
         "time": "4am - 7pm",
-        "northern hemisphere": "September, October, November, December, January, February, March, April, May, June",
-        "southern hemisphere": "March, April, May, June, July, August, September, October, November, December"
+        "north": "September, October, November, December, January, February, March, April, May, June",
+        "south": "March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Yellow Butterfly",
+        "image": "yellowbutterfly.png",
         "price": 160,
         "location": "Flying",
         "time": "4am - 7pm",
-        "northern hemisphere": "March, April, May, June, September, October",
-        "southern hemisphere": "March, April, September, October, November, December"
+        "north": "March, April, May, June, September, October",
+        "south": "March, April, September, October, November, December"
     }, {
         "name": "Tiger Butterfly",
+        "image": "tigerbutterfly.png",
         "price": 240,
         "location": "Flying",
         "time": "4am - 7pm",
-        "northern hemisphere": "March, April, May, June, July, August, September",
-        "southern hemisphere": "September, October, November, December, January, February, March"
+        "north": "March, April, May, June, July, August, September",
+        "south": "September, October, November, December, January, February, March"
     }, {
         "name": "Peacock Butterfly",
+        "image": "peacockbutterfly.png",
         "price": 2500,
         "location": "Above Purple, Black and Blue Flowers",
         "time": "4am - 7pm",
-        "northern hemisphere": "March, April, May, June",
-        "southern hemisphere": "September, October, November, December"
+        "north": "March, April, May, June",
+        "south": "September, October, November, December"
     }, {
         "name": "Common Bluebottle",
+        "image": "commonbluebottle.png",
         "price": 300,
         "location": "Flying",
         "time": "4am - 7pm",
-        "northern hemisphere": "April, May, June, July, August",
-        "southern hemisphere": "October , November, December, January, February"
+        "north": "April, May, June, July, August",
+        "south": "October , November, December, January, February"
     }, {
         "name": "Paper Kite Butterfly",
+        "image": "paperkitebutterfly.png",
         "price": 1000,
         "location": "Flying",
         "time": "8am - 7pm",
-        "northern hemisphere": "All Months",
-        "southern hemisphere": "All Months"
+        "north": "All Months",
+        "south": "All Months"
     }, {
         "name": "Great Purple Emperor",
+        "image": "greatpurpleemperor.png",
         "price": 3000,
         "location": "Flying",
         "time": "4am - 7am",
-        "northern hemisphere": "May, June, July, August",
-        "southern hemisphere": "November, December, January, February"
+        "north": "May, June, July, August",
+        "south": "November, December, January, February"
     }, {
         "name": "Monarch Butterfly",
+        "image": "monarchbutterfly.png",
         "price": 140,
         "location": "Flying",
         "time": "4am - 5pm",
-        "northern hemisphere": "September, October, November",
-        "southern hemisphere": "March, April, May"
+        "north": "September, October, November",
+        "south": "March, April, May"
     }, {
         "name": "Emperor Butterfly",
+        "image": "emperorbutterfly.png",
         "price": 4000,
         "location": "Flying",
         "time": "5pm - 8am",
-        "northern hemisphere": "December, January, February, March, June, July, August, September",
-        "southern hemisphere": "January, February, March, June, July, August, September, December"
+        "north": "December, January, February, March, June, July, August, September",
+        "south": "January, February, March, June, July, August, September, December"
     }, {
         "name": "Agrias Butterfly",
+        "image": "agriasbutterfly.png",
         "price": 3000,
         "location": "Flying",
         "time": "8am - 5pm",
-        "northern hemisphere": "April, May, June, July, August, September",
-        "southern hemisphere": "October, November, December, January, February, March"
+        "north": "April, May, June, July, August, September",
+        "south": "October, November, December, January, February, March"
     }, {
         "name": "Rajah Brooke's Birdwing",
+        "image": "rajahbrookesbirdwing.png",
         "price": 2500,
         "location": "Flying above Flowers",
         "time": "8am - 5pm",
-        "northern hemisphere": "December January, February, April, May, June, July, August, September",
-        "southern hemisphere": "June, July, August, October, November, December, January, February, March"
+        "north": "December January, February, April, May, June, July, August, September",
+        "south": "June, July, August, October, November, December, January, February, March"
     }, {
         "name": "Queen Alexandra's Birdwing",
+        "image": "queenalexandrasbirdwing.png",
         "price": 4000,
         "location": "Flying",
         "time": "8am - 4pm",
-        "northern hemisphere": "May, June, July, August, September",
-        "southern hemisphere": "November, December, January, February, March, April"
+        "north": "May, June, July, August, September",
+        "south": "November, December, January, February, March, April"
     }, {
         "name": "Moth",
+        "image": "moth.png",
         "price": 130,
         "location": "Flying Around Light",
         "time": "7pm - 4am",
-        "northern hemisphere": "All Months",
-        "southern hemisphere": "All Months"
+        "north": "All Months",
+        "south": "All Months"
     }, {
         "name": "Atlas Moth",
+        "image": "atlasmoth.png",
         "price": 3000,
         "location": "On Trees",
         "time": "7pm - 4am",
-        "northern hemisphere": "April, May, June, July, August, September",
-        "southern hemisphere": "October, November, December, January, February, March,"
+        "north": "April, May, June, July, August, September",
+        "south": "October, November, December, January, February, March,"
     }, {
         "name": "Madagascan Sunset Moth",
+        "image": "madagascansunsetmoth.png",
         "price": 2500,
         "location": "Flying",
         "time": "8am - 4pm",
-        "northern hemisphere": "April, May, June, July, August, September",
-        "southern hemisphere": "October, November, December, January, February, March"
+        "north": "April, May, June, July, August, September",
+        "south": "October, November, December, January, February, March"
     }, {
         "name": "Long Locust",
+        "image": "longlocust.png",
         "price": 200,
         "location": "On the Ground",
         "time": "8am - 7pm",
-        "northern hemisphere": "April, May, June, July, August, September, October, November",
-        "southern hemisphere": "October, November, December, January, February, March, April, May"
+        "north": "April, May, June, July, August, September, October, November",
+        "south": "October, November, December, January, February, March, April, May"
     }, {
         "name": "Migratory Locust",
+        "image": "migratorylocust.png",
         "price": 600,
         "location": "On the Ground",
         "time": "8am - 7pm",
-        "northern hemisphere": "August, September, October, November",
-        "southern hemisphere": "February, March, April, May"
+        "north": "August, September, October, November",
+        "south": "February, March, April, May"
     }, {
         "name": "Rice Grasshopper",
+        "image": "ricegrasshopper.png",
         "price": 160,
         "location": "On the Ground",
         "time": "8am - 7pm",
-        "northern hemisphere": "August, September, October, November",
-        "southern hemisphere": "February, March, April, May"
+        "north": "August, September, October, November",
+        "south": "February, March, April, May"
     }, {
         "name": "Grasshopper",
+        "image": "grasshopper.png",
         "price": 160,
         "location": "On the Ground",
         "time": "8am - 5pm",
-        "northern hemisphere": "July, August, September",
-        "southern hemisphere": "January, February, March"
+        "north": "July, August, September",
+        "south": "January, February, March"
     }, {
         "name": "Cricket",
+        "image": "cricket.png",
         "price": 130,
         "location": "On the Ground",
         "time": "5pm - 8am",
-        "northern hemisphere": "September, October, November",
-        "southern hemisphere": "March, April, May"
+        "north": "September, October, November",
+        "south": "March, April, May"
     }, {
         "name": "Bell Cricket",
+        "image": "bellcricket.png",
         "price": 430,
         "location": "On the Ground",
         "time": "5pm - 8am",
-        "northern hemisphere": "September, October",
-        "southern hemisphere": "March, April"
+        "north": "September, October",
+        "south": "March, April"
     }, {
         "name": "Mantis",
+        "image": "mantis.png",
         "price": 430,
         "location": "On Flowers",
         "time": "8am - 5pm",
-        "northern hemisphere": "March, April, May, June, July, August, September, October, November",
-        "southern hemisphere": "September, October, November, December, January, March, April"
+        "north": "March, April, May, June, July, August, September, October, November",
+        "south": "September, October, November, December, January, March, April"
     }, {
         "name": "Orchid Mantis",
+        "image": "orchidmantis.png",
         "price": 2400,
         "location": "On Flowers (White)",
         "time": "8am - 5pm",
-        "northern hemisphere": "March, April, May, June, July, August, September, October, November",
-        "southern hemisphere": "September, October, November, December, January, February, March, April, May"
+        "north": "March, April, May, June, July, August, September, October, November",
+        "south": "September, October, November, December, January, February, March, April, May"
     }, {
         "name": "Honeybee",
+        "image": "honeybee.png",
         "price": 200,
         "location": "Above Flowers",
         "time": "8am - 5pm",
-        "northern hemisphere": "March, April, May, June, July",
-        "southern hemisphere": "September, October, November, December, January"
+        "north": "March, April, May, June, July",
+        "south": "September, October, November, December, January"
     }, {
         "name": "Wasp",
+        "image": "wasp.png",
         "price": 2500,
         "location": "Shaking Trees",
         "time": "All Day",
-        "northern hemisphere": "All Months",
-        "southern hemisphere": "All Months"
+        "north": "All Months",
+        "south": "All Months"
     }, {
         "name": "Brown Cicada",
+        "image": "browncicada.png",
         "price": 250,
         "location": "On Trees",
         "time": "8am - 5pm",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Robust Cicada",
+        "image": "robustcicada.png",
         "price": 300,
         "location": "On Trees",
         "time": "8am - 5pm",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Giant Cicada",
+        "image": "giantcicada.png",
         "price": 500,
         "location": "On Trees",
         "time": "8am - 5pm",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Walker Cicada",
+        "image": "walkercicada.png",
         "price": 400,
         "location": "On Trees",
         "time": "8am - 4pm",
-        "northern hemisphere": "August, September",
-        "southern hemisphere": "February, March"
+        "north": "August, September",
+        "south": "February, March"
     }, {
         "name": "Evening Cicada",
+        "image": "eveningcicada.png",
         "price": 550,
         "location": "On Trees",
         "time": "4am - 8am &amp; 4pm - 7pm",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Cicada Shell",
+        "image": "cicadashell.png",
         "price": 10,
         "location": "On Trees",
         "time": "All Day",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Red Dragonfly",
+        "image": "reddragonfly.png",
         "price": 180,
         "location": "Flying",
         "time": "8am - 7pm",
-        "northern hemisphere": "September, October",
-        "southern hemisphere": "March, April"
+        "north": "September, October",
+        "south": "March, April"
     }, {
         "name": "Darner Dragonfly",
+        "image": "darnerdragonfly.png",
         "price": 230,
         "location": "Flying",
         "time": "8am - 5pm",
-        "northern hemisphere": "April, May, June, July, August, September, October",
-        "southern hemisphere": "October, November, December, January, February, March, April"
+        "north": "April, May, June, July, August, September, October",
+        "south": "October, November, December, January, February, March, April"
     }, {
         "name": "Banded Dragonfly",
+        "image": "bandeddragonfly.png",
         "price": 4500,
         "location": "Flying",
         "time": "8am - 5pm",
-        "northern hemisphere": "May, June, July, August, September, October",
-        "southern hemisphere": "November, December, January, February, March, April"
+        "north": "May, June, July, August, September, October",
+        "south": "November, December, January, February, March, April"
     }, {
         "name": "Damselfly",
+        "image": "damselfly.png",
         "price": 500,
         "location": "Flying",
         "time": "All Day",
-        "northern hemisphere": "November, December, January, February",
-        "southern hemisphere": "May, June, July, August"
+        "north": "November, December, January, February",
+        "south": "May, June, July, August"
     }, {
         "name": "Firefly",
+        "image": "firefly.png",
         "price": 300,
         "location": "Flying",
         "time": "7pm - 4pm",
-        "northern hemisphere": "June",
-        "southern hemisphere": "December"
+        "north": "June",
+        "south": "December"
     }, {
         "name": "Mole cricket",
+        "image": "molecricket.png",
         "price": 500,
         "location": "Underground",
         "time": "All Day",
-        "northern hemisphere": "November, December, January, February, March, April, May",
-        "southern hemisphere": "May, June, July, August, September, October, November"
+        "north": "November, December, January, February, March, April, May",
+        "south": "May, June, July, August, September, October, November"
     }, {
         "name": "Pondskater",
+        "image": "pondskater.png",
         "price": 130,
         "location": "On Ponds and Rivers",
         "time": "8am - 7pm",
-        "northern hemisphere": "May, June, July, August, September",
-        "southern hemisphere": "November, December, January, February, March"
+        "north": "May, June, July, August, September",
+        "south": "November, December, January, February, March"
     }, {
         "name": "Diving Beetle",
+        "image": "divingbeetle.png",
         "price": 800,
         "location": "On Ponds and Rivers",
         "time": "8am - 7pm",
-        "northern hemisphere": "May, June, July, August, September",
-        "southern hemisphere": "November, December, January, February, March"
+        "north": "May, June, July, August, September",
+        "south": "November, December, January, February, March"
     }, {
         "name": "Giant Water Bug",
+        "image": "giantwaterbug.png",
         "price": 2000,
         "location": "On Ponds and Rivers",
         "time": "7pm - 8am",
-        "northern hemisphere": "April, May, June, July, August, September",
-        "southern hemisphere": "January, February, March, October, November, December"
+        "north": "April, May, June, July, August, September",
+        "south": "January, February, March, October, November, December"
     }, {
         "name": "Stinkbug",
+        "image": "stinkbug.png",
         "price": 120,
         "location": "On Flowers",
         "time": "All Day",
-        "northern hemisphere": "March, April, May, June, July, August, September, October",
-        "southern hemisphere": "September, October, November, December, January, February, March, April"
+        "north": "March, April, May, June, July, August, September, October",
+        "south": "September, October, November, December, January, February, March, April"
     }, {
         "name": "Man-faced Stink Bug'",
+        "image": "manfacedstinkbug.png",
         "price": 1000,
         "location": "On Flowers",
         "time": "7pm - 8am",
-        "northern hemisphere": "March, April, May, June, July, August, September, October",
-        "southern hemisphere": "September, October, November, December, January, February, March, April"
+        "north": "March, April, May, June, July, August, September, October",
+        "south": "September, October, November, December, January, February, March, April"
     }, {
         "name": "Ladybug",
+        "image": "ladybug.png",
         "price": 200,
         "location": "On Flowers",
         "time": "8am - 5pm",
-        "northern hemisphere": "March, April, May, June, October",
-        "southern hemisphere": "April &amp; September, October, November, December"
+        "north": "March, April, May, June, October",
+        "south": "April &amp; September, October, November, December"
     }, {
         "name": "Tiger Beetle",
+        "image": "tigerbeetle.png",
         "price": 1500,
         "location": "Flying",
         "time": "All Day",
-        "northern hemisphere": "February, March, April, May, June, July, August, September, October",
-        "southern hemisphere": "September, October, November, December, January, February, March"
+        "north": "February, March, April, May, June, July, August, September, October",
+        "south": "September, October, November, December, January, February, March"
     }, {
         "name": "Jewel Beetle",
+        "image": "jewelbeetle.png",
         "price": 2400,
         "location": "On Tree Stumps",
         "time": "All Day",
-        "northern hemisphere": "April, May, June, July, August",
-        "southern hemisphere": "October, November, December, January, February"
+        "north": "April, May, June, July, August",
+        "south": "October, November, December, January, February"
     }, {
         "name": "Citrus Long-horned Beetle",
+        "image": "citruslonghornedbeetle.png",
         "price": 350,
         "location": "On Tree Stumps",
         "time": "All Day",
-        "northern hemisphere": "All Months",
-        "southern hemisphere": "All Months"
+        "north": "All Months",
+        "south": "All Months"
     }, {
         "name": "Rosalia Batesi Beetle",
+        "image": "rosaliabatesibeetle.png",
         "price": 3000,
         "location": "On Tree Stumps",
         "time": "All Day",
-        "northern hemisphere": "May, June, July, August, September",
-        "southern hemisphere": "November, December, January, February, March"
+        "north": "May, June, July, August, September",
+        "south": "November, December, January, February, March"
     }, {
         "name": "Blue Weevil Beetle",
+        "image": "blueweevilbeetle.png",
         "price": 800,
         "location": "On Trees",
         "time": "All Day",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Violin Beetle",
+        "image": "violinbeetle.png",
         "price": 450,
         "location": "On Trees",
         "time": "All Day",
-        "northern hemisphere": "May, June, September, October, November",
-        "southern hemisphere": "March, April, May, November, December"
+        "north": "May, June, September, October, November",
+        "south": "March, April, May, November, December"
     }, {
         "name": "Dung Beetle",
+        "image": "dungbeetle.png",
         "price": 3000,
         "location": "On the Ground (Rolling Snowballs)",
         "time": "All Day",
-        "northern hemisphere": "December, January, February,",
-        "southern hemisphere": "June, July, August"
+        "north": "December, January, February,",
+        "south": "June, July, August"
     }, {
         "name": "Earth-boring Dung Beetle",
+        "image": "earthboringdungbeetle.png",
         "price": 300,
         "location": "On Ground",
         "time": "All Day",
-        "northern hemisphere": "July, August, September",
-        "southern hemisphere": "January, February, March"
+        "north": "July, August, September",
+        "south": "January, February, March"
     }, {
         "name": "Scarab Beetle",
+        "image": "scarabbeetle.png",
         "price": 10000,
         "location": "On Trees",
         "time": "11pm - 8am",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Drone Beetle",
+        "image": "dronebeetle.png",
         "price": 200,
         "location": "On Trees",
         "time": "All Day",
-        "northern hemisphere": "June, July, August",
-        "southern hemisphere": "December, January, February"
+        "north": "June, July, August",
+        "south": "December, January, February"
     }, {
         "name": "Goliath Beetle",
+        "image": "goliathbeetle.png",
         "price": 8000,
         "location": "On Trees (Coconut)",
         "time": "5pm - 8am",
-        "northern hemisphere": "June, July, August, September",
-        "southern hemisphere": "December, January, February, March, April"
+        "north": "June, July, August, September",
+        "south": "December, January, February, March, April"
     }, {
         "name": "Saw Stag",
+        "image": "sawstag.png",
         "price": 2000,
         "location": "On Trees",
         "time": "All Day",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Miyama Stag",
+        "image": "miyamastag.png",
         "price": 1000,
         "location": "On Trees",
         "time": "All Day",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Giant Stag",
+        "image": "giantstag.png",
         "price": 10000,
         "location": "On Trees",
         "time": "11pm - 8am",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Rainbow Stag",
+        "image": "rainbowstag.png",
         "price": 6000,
         "location": "On Trees",
         "time": "7pm - 8am",
-        "northern hemisphere": "June, July, August, September",
-        "southern hemisphere": "December, January, February, March"
+        "north": "June, July, August, September",
+        "south": "December, January, February, March"
     }, {
         "name": "Cyclommatus Stag",
+        "image": "cyclommatusstag.png",
         "price": 8000,
         "location": "On Trees",
         "time": "5pm - 8am",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Golden Stag",
+        "image": "goldenstag.png",
         "price": 12000,
         "location": "On Trees",
         "time": "5pm - 8am",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Giraffe Stag",
+        "image": "giraffestag.png",
         "price": 12000,
         "location": "On Trees",
         "time": "5pm - 8am",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Horned Dynastid",
+        "image": "horneddynastid.png",
         "price": 1350,
         "location": "On Trees",
         "time": "5pm - 8am",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Horned Atlas",
+        "image": "hornedatlas.png",
         "price": 8000,
         "location": "On Trees",
         "time": "5pm - 8am",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Horned Elephant",
+        "image": "hornedelephant.png",
         "price": 8000,
         "location": "On Trees",
         "time": "5pm - 8am",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Horned Hercules",
+        "image": "hornedhercules.png",
         "price": 12000,
         "location": "On Trees",
         "time": "5pm - 8am",
-        "northern hemisphere": "July, August",
-        "southern hemisphere": "January, February"
+        "north": "July, August",
+        "south": "January, February"
     }, {
         "name": "Walking Stick",
+        "image": "walkingstick.png",
         "price": 600,
         "location": "On Trees",
         "time": "4am - 8am &amp; 5pm - 7pm",
-        "northern hemisphere": "July, August, September, October, November",
-        "southern hemisphere": "January, February, March, April, May"
+        "north": "July, August, September, October, November",
+        "south": "January, February, March, April, May"
     }, {
         "name": "Walking Leaf",
+        "image": "walkingleaf.png",
         "price": 600,
         "location": "On Ground (Beneath Trees)",
         "time": "All Day",
-        "northern hemisphere": "July, August, September",
-        "southern hemisphere": "January, February, March"
+        "north": "July, August, September",
+        "south": "January, February, March"
     }, {
         "name": "Bagworm",
+        "image": "bagworm.png",
         "price": 600,
         "location": "On Trees",
         "time": "All Day",
-        "northern hemisphere": "All Months",
-        "southern hemisphere": "All Months"
+        "north": "All Months",
+        "south": "All Months"
     }, {
         "name": "Ant",
+        "image": "ant.png",
         "price": 80,
         "location": "On Rotten Turnips and Fruit",
         "time": "All Day",
-        "northern hemisphere": "All Months",
-        "southern hemisphere": "All Months"
+        "north": "All Months",
+        "south": "All Months"
     }, {
         "name": "Hermit Crab",
+        "image": "hermitcrab.png",
         "price": 1000,
         "location": "On Beach",
         "time": "7pm - 8am",
-        "northern hemisphere": "All Months",
-        "southern hemisphere": "All Months"
+        "north": "All Months",
+        "south": "All Months"
     }, {
         "name": "Wharf Roach",
+        "image": "wharfroach.png",
         "price": 200,
         "location": "On Beach (Rocks)",
         "time": "All Day",
-        "northern hemisphere": "All Months",
-        "southern hemisphere": "All Months"
+        "north": "All Months",
+        "south": "All Months"
     }, {
         "name": "Fly",
+        "image": "fly.png",
         "price": 60,
         "location": "On Rotten Food and Garbage",
         "time": "All Day",
-        "northern hemisphere": "All Months",
-        "southern hemisphere": "All Months"
+        "north": "All Months",
+        "south": "All Months"
     }, {
         "name": "Mosquito",
+        "image": "mosquito.png",
         "price": 130,
         "location": "Flying",
         "time": "5pm - 4am",
-        "northern hemisphere": "June, July, August, September",
-        "southern hemisphere": "December, January, February, March"
+        "north": "June, July, August, September",
+        "south": "December, January, February, March"
     }, {
         "name": "Flea",
+        "image": "flea.png",
         "price": 70,
         "location": "On Flea-Infested Villagers",
         "time": "All Day",
-        "northern hemisphere": "April, May, June, July, August, September, October, November",
-        "southern hemisphere": "October, November, December, January, February, March, April, May"
+        "north": "April, May, June, July, August, September, October, November",
+        "south": "October, November, December, January, February, March, April, May"
     }, {
         "name": "Snail",
+        "image": "snail.png",
         "price": 250,
         "location": "On Rocks (Rain)",
         "time": "All Day",
-        "northern hemisphere": "All Months",
-        "southern hemisphere": "All Months"
+        "north": "All Months",
+        "south": "All Months"
     }, {
         "name": "Pill Bug",
+        "image": "pillbug.png",
         "price": 250,
         "location": "Hitting Rocks",
         "time": "11pm - 4pm",
-        "northern hemisphere": "September, October, November, December, January, February, March, April, May, June",
-        "southern hemisphere": "March, April, May, June, July, August, September, October, November, December"
+        "north": "September, October, November, December, January, February, March, April, May, June",
+        "south": "March, April, May, June, July, August, September, October, November, December"
     }, {
         "name": "Centipede",
+        "image": "centipede.png",
         "price": 300,
         "location": "Hitting Rocks",
         "time": "5pm - 11pm",
-        "northern hemisphere": "September, October, November, December, January, February, March, April, May, June",
-        "southern hemisphere": "March, April, May, June, July, August, September, November, December"
+        "north": "September, October, November, December, January, February, March, April, May, June",
+        "south": "March, April, May, June, July, August, September, November, December"
     }, {
         "name": "Spider",
+        "image": "spider.png",
         "price": 480,
         "location": "Shaking Trees",
         "time": "7pm - 8am",
-        "northern hemisphere": "All Months",
-        "southern hemisphere": "All Months"
+        "north": "All Months",
+        "south": "All Months"
     }, {
         "name": "Tarantula",
+        "image": "tarantula.png",
         "price": 8000,
         "location": "On Ground",
         "time": "7pm - 4am",
-        "northern hemisphere": "November, December, January, February, March, April",
-        "southern hemisphere": "May, June, July, August, September, October"
+        "north": "November, December, January, February, March, April",
+        "south": "May, June, July, August, September, October"
     }, {
         "name": "Scorpion",
+        "image": "scorpion.png",
         "price": 8000,
         "location": "On Ground",
         "time": "7pm - 4am",
-        "northern hemisphere": "May, June, July, August, September, October",
-        "southern hemisphere": "November, December, January, February, March, April"
+        "north": "May, June, July, August, September, October",
+        "south": "November, December, January, February, March, April"
     }
 ]
