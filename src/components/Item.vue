@@ -10,8 +10,8 @@
           p #[b #[span ] {{ item.time }}]
 
     .desc
-      .shadow-size {{ item.shadow }}
-      .image(:style="{backgroundImage: 'url(' + require('../assets/fishes/icon/' + item.image) + ')'}")
+      .shadow-size(v-show="item.shadow") {{ item.shadow }}
+      .image(:style="{backgroundImage: 'url(' + require('../assets/' + selectedType + '/icon/' + item.image) + ')' || ''}")
       p #[b {{ item.name }}]
       p(v-show="sortIndex !== 1") ${{ item.price }}
       p(v-show="sortIndex !== 2") {{ item.location }} #[span.extra(v-show="item.location_extra") ({{ item.location_extra }})]
@@ -53,7 +53,7 @@
 export default {
   name: 'Item',
 
-  props: ['item', 'sortIndex'],
+  props: ['item', 'sortIndex', 'selectedType'],
 
   mounted () {
 

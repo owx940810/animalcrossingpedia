@@ -1,16 +1,13 @@
 <template lang="pug">
   #all
-
-    hr
-
     #search-wrapper
       input(type="text", placeholder="eg: shark", v-model="searcheditem")
 
-    .toggles
+    #sort
       button.default(@click="changeSort") SORT BY#[br]#[hr]{{ sort.type[sort.index].toLocaleUpperCase() }}
 
     .all
-      item(v-for="(item, index) in selecteditems", :item="item", :key="index", :sortIndex="sort.index", @click="selectCard(item)")
+      item(v-for="(item, index) in selecteditems", :item="item", :key="index", :sortIndex="sort.index", :selectedType="selectedType")
 
 </template>
 
@@ -21,7 +18,7 @@
   export default {
     name: 'All',
 
-    props: ['all', 'filterProperties'],
+    props: ['fishes', 'bugs', 'filterProperties', 'selectedType'],
 
     components: {
       Item
@@ -37,9 +34,23 @@
       }
     },
 
+    watch: {
+      selectedType (val) {
+        if (this.selectedType === "bugs" && this.sort.index === 4) {
+          this.changeSort()
+        }
+      }
+    },
+
     computed: {
       filteredItems () {
-        let arr = JSON.parse(JSON.stringify(this.all))
+        let arr = []
+
+        if (this.selectedType === "fishes") {
+          arr = JSON.parse(JSON.stringify(this.fishes))
+        } else if (this.selectedType === "bugs") {
+          arr = JSON.parse(JSON.stringify(this.bugs))
+        }
 
         if(this.filterProperties.months.length > 0) {
           arr = arr.filter(item => {
@@ -118,7 +129,13 @@
 
       changeSort () {
         this.sort.index++
-        if (this.sort.index >= this.sort.type.length) {
+
+        let maxLength = this.sort.type.length
+
+        if (this.selectedType === 'bugs') {
+          maxLength = this.sort.type.length - 1
+        }
+        if (this.sort.index >= maxLength) {
           this.sort.index = 0
         }
 
@@ -129,9 +146,9 @@
         window.localStorage.setItem('sort', this.sort.index)
       },
 
-      selectCard (item) {
-        this.$emit("showOverlay", item)
-      }
+      // selectCard (item) {
+      //   this.$emit("showOverlay", item)
+      // },
     }
   }
 </script>
@@ -143,10 +160,6 @@
   #all
     margin-top: 50px
     padding-bottom: 50px
-
-    > hr
-      width: calc(100% - 100px)
-      margin-top: 60px
 
     #search-wrapper
       position: relative
@@ -177,7 +190,7 @@
     h1
       text-align: center
 
-    .toggles
+    #sort
       margin-top: 30px
       padding: 0 50px
       display: flex

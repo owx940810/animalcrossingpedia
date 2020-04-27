@@ -54,7 +54,7 @@
             input(type="checkbox" value="December" v-model="tempFilterProperties.months" @click="gtagging('month', 'december')")
             span Dec
 
-      .filter-container
+      .filter-container(v-if="selectedType === 'fishes'")
         p LOCATION:
         .filters
           label
@@ -79,7 +79,7 @@
 export default {
   name: 'FilterComponent',
 
-  props: ['filterProperties'],
+  props: ['filterProperties', 'selectedType'],
 
   data () {
     return {
@@ -178,7 +178,7 @@ export default {
     position: fixed
     top: 0
     left: 0
-    z-index: 1
+    z-index: 2
     font-family: "Share Tech Mono", sans-serif
     width: 100%
     box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.3)
