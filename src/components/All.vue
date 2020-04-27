@@ -140,8 +140,8 @@
         }
 
         gtag('event', 'sort', {
-          'event_category': 'sort by'
-          'event_label': this.sort.type[this.sort.index]
+          'event_category': 'sort by',
+          'event_label': this.sort.type[this.sort.index],
           'value': this.sort.index
         })
 
