@@ -2,8 +2,8 @@
   #app
     FilterComponent(:filterProperties="filterProperties", :selectedType="selectedType")
 
-    #alert
-      p bug list coming soon*
+    //- #alert
+    //-   p bug list coming soon*
 
     img#logo(alt="Animal Crossing logo" src="./assets/animal-crossing-logo-700px.png")
 
