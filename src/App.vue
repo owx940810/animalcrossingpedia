@@ -123,8 +123,9 @@ export default {
     display: block
     width: 300px
     margin: 0 auto
-    margin-top: 20px
+    // margin-top: 20px //with alert
     margin-bottom: 100px
+    margin-top: calc(20px + 42px) //no alert
 
     +mobile
       width: 150px
