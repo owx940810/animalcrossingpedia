@@ -16,6 +16,7 @@
 
     footer
       p built by Calvin Ong
+      p #[a(href="https://www.reddit.com/r/AnimalCrossing/comments/fvavbs/created_a_website_for_a_list_of_fishes_bug_list/") reddit thread]
       p.
         Credits:
         #[a(href="https://www.ign.com/wikis/animal-crossing-new-horizons/Fish_Guide:_Fish_List,_Sell_Price,_and_Fishing_Tips" target="_blank") IGN] |
