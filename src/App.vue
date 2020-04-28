@@ -16,7 +16,8 @@
 
     footer
       p built by Calvin Ong
-      p #[a(href="https://www.reddit.com/r/AnimalCrossing/comments/g9ewal/created_an_encyclopedia_website_for_fishes_and/") reddit thread]
+      p #[a(href="https://www.reddit.com/r/AnimalCrossing/comments/g9ewal/created_an_encyclopedia_website_for_fishes_and/") reddit r/AnimalCrossing] | #[a(href="https://www.reddit.com/r/ac_newhorizons/comments/g9gevz/created_an_encylopedia_page_for_the_list_fishes/") reddit r/ac_newhorizons]
+
       p.
         Credits:
         #[a(href="https://www.ign.com/wikis/animal-crossing-new-horizons/Fish_Guide:_Fish_List,_Sell_Price,_and_Fishing_Tips" target="_blank") IGN] |
