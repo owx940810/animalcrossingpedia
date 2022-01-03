@@ -1,13 +1,13 @@
 <template lang="pug">
-  #all
-    #search-wrapper
-      input(type="text", placeholder="eg: shark", v-model="searcheditem")
+#all
+  #search-wrapper
+    input(type="text", placeholder="eg: shark", v-model="searcheditem")
 
-    #sort
-      button.default(@click="changeSort") SORT BY#[br]#[hr]{{ sort.type[sort.index].toLocaleUpperCase() }}
+  #sort
+    button.default(@click="changeSort") SORT BY#[br]#[hr]{{ sort.type[sort.index].toLocaleUpperCase() }}
 
-    .all
-      item(v-for="(item, index) in selecteditems", :item="item", :key="index", :sortIndex="sort.index", :selectedType="selectedType")
+  .all
+    item(v-for="(item, index) in selecteditems", :item="item", :key="index", :sortIndex="sort.index", :selectedType="selectedType")
 
 </template>
 
@@ -18,7 +18,7 @@
   export default {
     name: 'All',
 
-    props: ['fishes', 'bugs', 'filterProperties', 'selectedType'],
+    props: ['fishes', 'bugs', 'deepSeaCreatures', 'filterProperties', 'selectedType'],
 
     components: {
       Item
@@ -50,6 +50,8 @@
           arr = JSON.parse(JSON.stringify(this.fishes))
         } else if (this.selectedType === "bugs") {
           arr = JSON.parse(JSON.stringify(this.bugs))
+        } else if (this.selectedType === "deepSeaCreatures") {
+          arr = JSON.parse(JSON.stringify(this.deepSeaCreatures))
         }
 
         if(this.filterProperties.months.length > 0) {

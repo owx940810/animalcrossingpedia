@@ -1,5 +1,5 @@
 <template lang="pug">
-  #All
+#All
 
 </template>
 

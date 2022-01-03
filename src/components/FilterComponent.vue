@@ -1,77 +1,77 @@
 <template lang="pug">
-  #filter-component(:class="{active: filterDropdownState}")
-    .title-wrapper(@click="openFilterDropdown")
-      p FILTERS
-      button.dropdown
-    .filter-containers
-      .filter-container
-        p HEMISPHERE:
-        .filters
-          label
-            input(type="checkbox" value="north" v-model="tempFilterProperties.hemisphere" @click="gtagging('hemisphere', 'north')")
-            span north
-          label
-            input(type="checkbox" value="south" v-model="tempFilterProperties.hemisphere" @click="gtagging('hemisphere', 'south')")
-            span south
+#filter-component(:class="{active: filterDropdownState}")
+  .title-wrapper(@click="openFilterDropdown")
+    p FILTERS
+    button.dropdown
+  .filter-containers
+    .filter-container
+      p HEMISPHERE:
+      .filters
+        label
+          input(type="checkbox" value="north" v-model="tempFilterProperties.hemisphere" @click="gtagging('hemisphere', 'north')")
+          span north
+        label
+          input(type="checkbox" value="south" v-model="tempFilterProperties.hemisphere" @click="gtagging('hemisphere', 'south')")
+          span south
 
-      .filter-container
-        p MONTHS:
-        .filters
-          label
-            input(type="checkbox" value="January" v-model="tempFilterProperties.months" @click="gtagging('month', 'january')")
-            span Jan
-          label
-            input(type="checkbox" value="February" v-model="tempFilterProperties.months" @click="gtagging('month', 'february')")
-            span Feb
-          label
-            input(type="checkbox" value="March" v-model="tempFilterProperties.months" @click="gtagging('month', 'march')")
-            span Mar
-          label
-            input(type="checkbox" value="April" v-model="tempFilterProperties.months" @click="gtagging('month', 'april')")
-            span Apr
-          label
-            input(type="checkbox" value="May" v-model="tempFilterProperties.months" @click="gtagging('month', 'may')")
-            span May
-          label
-            input(type="checkbox" value="June" v-model="tempFilterProperties.months" @click="gtagging('month', 'june')")
-            span Jun
-          label
-            input(type="checkbox" value="July" v-model="tempFilterProperties.months" @click="gtagging('month', 'july')")
-            span Jul
-          label
-            input(type="checkbox" value="August" v-model="tempFilterProperties.months" @click="gtagging('month', 'august')")
-            span Aug
-          label
-            input(type="checkbox" value="September" v-model="tempFilterProperties.months" @click="gtagging('month', 'september')")
-            span Sep
-          label
-            input(type="checkbox" value="October" v-model="tempFilterProperties.months" @click="gtagging('month', 'october')")
-            span Oct
-          label
-            input(type="checkbox" value="November" v-model="tempFilterProperties.months" @click="gtagging('month', 'november')")
-            span Nov
-          label
-            input(type="checkbox" value="December" v-model="tempFilterProperties.months" @click="gtagging('month', 'december')")
-            span Dec
+    .filter-container
+      p MONTHS:
+      .filters
+        label
+          input(type="checkbox" value="January" v-model="tempFilterProperties.months" @click="gtagging('month', 'january')")
+          span Jan
+        label
+          input(type="checkbox" value="February" v-model="tempFilterProperties.months" @click="gtagging('month', 'february')")
+          span Feb
+        label
+          input(type="checkbox" value="March" v-model="tempFilterProperties.months" @click="gtagging('month', 'march')")
+          span Mar
+        label
+          input(type="checkbox" value="April" v-model="tempFilterProperties.months" @click="gtagging('month', 'april')")
+          span Apr
+        label
+          input(type="checkbox" value="May" v-model="tempFilterProperties.months" @click="gtagging('month', 'may')")
+          span May
+        label
+          input(type="checkbox" value="June" v-model="tempFilterProperties.months" @click="gtagging('month', 'june')")
+          span Jun
+        label
+          input(type="checkbox" value="July" v-model="tempFilterProperties.months" @click="gtagging('month', 'july')")
+          span Jul
+        label
+          input(type="checkbox" value="August" v-model="tempFilterProperties.months" @click="gtagging('month', 'august')")
+          span Aug
+        label
+          input(type="checkbox" value="September" v-model="tempFilterProperties.months" @click="gtagging('month', 'september')")
+          span Sep
+        label
+          input(type="checkbox" value="October" v-model="tempFilterProperties.months" @click="gtagging('month', 'october')")
+          span Oct
+        label
+          input(type="checkbox" value="November" v-model="tempFilterProperties.months" @click="gtagging('month', 'november')")
+          span Nov
+        label
+          input(type="checkbox" value="December" v-model="tempFilterProperties.months" @click="gtagging('month', 'december')")
+          span Dec
 
-      .filter-container(v-if="selectedType === 'fishes'")
-        p LOCATION:
-        .filters
-          label
-            input(type="checkbox" value="River" v-model="tempFilterProperties.location" @click="gtagging('location', 'river')")
-            span river
-          label
-            input(type="checkbox" value="Pond" v-model="tempFilterProperties.location" @click="gtagging('location', 'pond')")
-            span pond
-          label
-            input(type="checkbox" value="Sea" v-model="tempFilterProperties.location" @click="gtagging('location', 'sea')")
-            span sea
-          label
-            input(type="checkbox" value="Pier" v-model="tempFilterProperties.location" @click="gtagging('location', 'pier')")
-            span pier
+    .filter-container(v-if="selectedType === 'fishes'")
+      p LOCATION:
+      .filters
+        label
+          input(type="checkbox" value="River" v-model="tempFilterProperties.location" @click="gtagging('location', 'river')")
+          span river
+        label
+          input(type="checkbox" value="Pond" v-model="tempFilterProperties.location" @click="gtagging('location', 'pond')")
+          span pond
+        label
+          input(type="checkbox" value="Sea" v-model="tempFilterProperties.location" @click="gtagging('location', 'sea')")
+          span sea
+        label
+          input(type="checkbox" value="Pier" v-model="tempFilterProperties.location" @click="gtagging('location', 'pier')")
+          span pier
 
-      .break
-      button.apply-filter(@click="applyFilters") APPLY FILTER
+    .break
+    button.apply-filter(@click="applyFilters") APPLY FILTER
 
 </template>
 
