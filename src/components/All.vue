@@ -9,6 +9,9 @@
   .all
     item(v-for="(item, index) in selecteditems", :item="item", :key="index", :sortIndex="sort.index", :selectedType="selectedType")
 
+  .download-list-link-wrapper
+    a.default.download-list-link(:href="`https://raw.githubusercontent.com/owx940810/animalcrossingpedia/master/src/assets/screenshot-list/${this.selectedType}.png`" download target="_blank", @click="downloadLink") Download image for {{ this.selectedType }} list
+
 </template>
 
 <script>
@@ -150,6 +153,13 @@
         window.localStorage.setItem('sort', this.sort.index)
       },
 
+      downloadLink () {
+        gtag('event', 'download image', {
+          'event_category': 'download image',
+          'event_label': this.selectedType
+        })
+      }
+
       // selectCard (item) {
       //   this.$emit("showOverlay", item)
       // },
@@ -214,4 +224,9 @@
         padding: 0 20px
         display: grid
         grid-template-columns: repeat(2, minmax(60px, 1fr))
+
+  .download-list-link-wrapper
+    text-align: center
+    margin: 100px 0
+
 </style>
