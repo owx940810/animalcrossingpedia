@@ -1,0 +1,363 @@
+[
+    {
+        "name": "Seaweed",
+        "image": "seaweed.png",
+        "price": 600,
+        "shadow": "large",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, May, June, July, October, November, December",
+        "south": "January, April, May, June, July, August, September, October, November, December"
+    }, {
+        "name": "Sea Grapes",
+        "image": "sea_grapes.png",
+        "price": 900,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "June, July, August, September",
+        "south": "January, February, March, December"
+    }, {
+        "name": "Sea Cucumber",
+        "image": "sea_cucumber.png",
+        "price": 500,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, November, December",
+        "south": "May, June, July, August, September, October"
+    }, {
+        "name": "Sea Pig",
+        "image": "sea_pig.png",
+        "price": 8000,
+        "shadow": "mediu",
+        "location": "Sea (Diving)",
+        "time": "4PM - 9AM",
+        "north": "January, February, November, December",
+        "south": "May, June, July, August"
+    }, {
+        "name": "Sea Star",
+        "image": "sea_star.png",
+        "price": 500,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
+    }, {
+        "name": "Sea Urchin",
+        "image": "sea_urchin.png",
+        "price": 1700,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "May, June, July, August, September",
+        "south": "January, February, March, November, December"
+    }, {
+        "name": "Slate Pencil Urchin",
+        "image": "slate_pencil_urchin.png",
+        "price": 2000,
+        "shadow": "large",
+        "location": "Sea (Diving)",
+        "time": "4pm - 9am",
+        "north": "May, June, July, August, September",
+        "south": "January, February, March, November, December"
+    }, {
+        "name": "Sea Anemone",
+        "image": "sea_anemone.png",
+        "price": 500,
+        "shadow": "large",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
+    }, {
+        "name": "Moon Jellyfish",
+        "image": "moon_jellyfish.png",
+        "price": 600,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "July, August, September",
+        "south": "January, February, March"
+    }, {
+        "name": "Sea Slug",
+        "image": "sea_slug.png",
+        "price": 600,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
+    }, {
+        "name": "Pearl Oyster",
+        "image": "pearl_oyster.png",
+        "price": 2800,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
+    }, {
+        "name": "Mussel",
+        "image": "mussel.png",
+        "price": 1500,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, December"
+    }, {
+        "name": "Oyster",
+        "image": "oyster.png",
+        "price": 1100,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, September, October, November, December",
+        "south": "March, April, May, June, July, August"
+    }, {
+        "name": "Scallop",
+        "image": "scallop.png",
+        "price": 1200,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
+    }, {
+        "name": "Whelk",
+        "image": "whelk.png",
+        "price": 1000,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
+    }, {
+        "name": "Turban Shell",
+        "image": "turban_shell.png",
+        "price": 1000,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "March, April, May, September, October, November, December",
+        "south": "March, April, May, June, September, October, November"
+    }, {
+        "name": "Abalone",
+        "image": "abalone.png",
+        "price": 1000,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "4pm - 9am",
+        "north": "January, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, December"
+    }, {
+        "name": "Gigas Giant Clam",
+        "image": "gigas_giant_clam.png",
+        "price": 1500,
+        "shadow": "huge",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "May, June, July, August, September",
+        "south": "January, February, March, November, December"
+    }, {
+        "name": "Chambered Nautilus",
+        "image": "chambered_nautilus.png",
+        "price": 1800,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "4pm - 9am",
+        "north": "March, April, May, June, September, October, November",
+        "south": "March, April, May, September, October, November, December"
+    }, {
+        "name": "Octopus",
+        "image": "octopus.png",
+        "price": 1200,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
+    }, {
+        "name": "Umbrella Octopus",
+        "image": "umbrella_octopus.png",
+        "price": 6000,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "March, April, May, September, October, November",
+        "south": "March, April, May, September, October, November"
+    }, {
+        "name": "Vampire Squid",
+        "image": "vampire_squid.png",
+        "price": 10000,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "4pm - 9am",
+        "north": "May, June, July, August",
+        "south": "January, February, November, December"
+    }, {
+        "name": "Firefly Squid",
+        "image": "firefly_squid.png",
+        "price": 1400,
+        "shadow": "tiny",
+        "location": "Sea (Diving)",
+        "time": "9pm - 4am",
+        "north": "March, April, May, June",
+        "south": "January, February, November, December"
+    }, {
+        "name": "Gazami Crab",
+        "image": "gazami_crab.png",
+        "price": 2200,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "June, July, August, September, October, November",
+        "south": "January, February, March, April, May, December"
+    }, {
+        "name": "Dungeoness Crab",
+        "image": "dungeoness_crab.png",
+        "price": 1900,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, May, November, December",
+        "south": "May, June, July, August, September, October, November"
+    }, {
+        "name": "Snow Crab",
+        "image": "snow_crab.png",
+        "price": 6000,
+        "shadow": "large",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, November, December",
+        "south": "May, June, July, August, September, October"
+    }, {
+        "name": "Red King Crab",
+        "image": "red_king_crab.png",
+        "price": 8000,
+        "shadow": "large",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, November, December",
+        "south": "May, June, July, August, September"
+    }, {
+        "name": "Acorn Barnacle",
+        "image": "acorn_barnicle.png",
+        "price": 600,
+        "shadow": "tiny",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
+    }, {
+        "name": "Spider Crab",
+        "image": "spider_crab.png",
+        "price": 12000,
+        "shadow": "huge",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "March, April",
+        "south": "September, October"
+    }, {
+        "name": "Tiger Prawn",
+        "image": "tiger_prawn.png",
+        "price": 3000,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "June, July, August, September",
+        "south": "January, February, March, December"
+    }, {
+        "name": "Sweet Shrimp",
+        "image": "sweet_shrimp.png",
+        "price": 1400,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "4pm - 9am",
+        "north": "January, February, September, October, November, December",
+        "south": "March, April, May, June, July, August"
+    }, {
+        "name": "Mantis Shrimp",
+        "image": "mantis_shrimp.png",
+        "price": 2500,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "4pm - 9am",
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
+    }, {
+        "name": "Spiny Lobster",
+        "image": "spiny_lobster.png",
+        "price": 5000,
+        "shadow": "large",
+        "location": "Sea (Diving)",
+        "time": "9pm - 4am",
+        "north": "October, November, December",
+        "south": "April, May, June"
+    }, {
+        "name": "Lobster",
+        "image": "lobster.png",
+        "price": 5000,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "All day",
+        "north": "January, April, May, June, December",
+        "south": "June, July, October, November, December"
+    }, {
+        "name": "Giant Isopod",
+        "image": "giant_isopod.png",
+        "price": 12000,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "9am - 4PM and 9pm - 4am",
+        "north": "July, August, September, October",
+        "south": "January, February, March, April"
+    }, {
+        "name": "Horseshoe Crab",
+        "image": "horseshoe_crab.png",
+        "price": 2500,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "9pm - 4am",
+        "north": "July, August, September",
+        "south": "January, February, March"
+    }, {
+        "name": "Sea Pineapple",
+        "image": "sea_pineapple.png",
+        "price": 1500,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "All Day",
+        "north": "January, February, March, April, May, June, July, August, September, October, November, December",
+        "south": "January, February, March, April, May, June, July, August, September, October, November, December"
+    }, {
+        "name": "Spotted Garden Eel",
+        "image": "spotted_garden_eel.png",
+        "price": 1100,
+        "shadow": "small",
+        "location": "Sea (Diving)",
+        "time": "4am - 9pm",
+        "north": "May, June, July August, September, October",
+        "south": "January, February, March, April, November, December"
+    }, {
+        "name": "Flatworm",
+        "image": "flatworm.png",
+        "price": 700,
+        "shadow": "tiny",
+        "location": "Sea (Diving)",
+        "time": "4pm - 9am",
+        "north": "August, September",
+        "south": "February, March"
+    }, {
+        "name": "Venus' Flower Basket",
+        "image": "venus_flower_basket.png",
+        "price": 5000,
+        "shadow": "medium",
+        "location": "Sea (Diving)",
+        "time": "All day",
+        "north": "January, February, October, November, December",
+        "south": "April, May, June, July, August"
+    }
+]
