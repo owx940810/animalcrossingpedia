@@ -1,29 +1,34 @@
 <template lang="pug">
-  #app
-    FilterComponent(:filterProperties="filterProperties", :selectedType="selectedType")
+#app
+  FilterComponent(:filterProperties="filterProperties", :selectedType="selectedType")
 
-    //- #alert
-    //-   p bug list coming soon*
+  //- #alert
+  //-   p bug list coming soon*
 
-    img#logo(alt="Animal Crossing logo" src="./assets/animal-crossing-logo-700px.png")
+  img#logo(alt="Animal Crossing logo" src="./assets/animal-crossing-logo-700px.png")
 
-    #type-toggle
-      .toggle(:data-type="selectedType", @click="toggleType")
-        .type.fish Fish
-        .type.bug Bug
+  #type-toggle
+    .toggle
+      button.default.fishes(@click="selectCreatureType('fishes')") Fish
+      button.default.bugs(@click="selectCreatureType('bugs')") Bug
+      button.default.deep-sea-creatures(@click="selectCreatureType('deepSeaCreatures')") Deep Sea Creatures
 
-    All(:fishes="fishes", :bugs="bugs" @showOverlay="showOverlay", :filterProperties="filterProperties", :selectedType="selectedType")
+  All(:fishes="fishes", :bugs="bugs", :deepSeaCreatures="deepSeaCreatures", @showOverlay="showOverlay", :filterProperties="filterProperties", :selectedType="selectedType")
 
-    footer
-      p built by Calvin Ong
-      p #[a(href="https://www.reddit.com/r/AnimalCrossing/comments/g9ewal/created_an_encyclopedia_website_for_fishes_and/") reddit r/AnimalCrossing] | #[a(href="https://www.reddit.com/r/ac_newhorizons/comments/g9gevz/created_an_encylopedia_page_for_the_list_fishes/") reddit r/ac_newhorizons]
+  footer
+    a(href="https://calvinong.dev") Designed &amp; Built by Calvin Ong
+    br
+    a.github-link(href="https://github.com/owx940810/animalcrossingpedia")
+      img(src="./assets/feather/github.svg")
+      span Github
 
-      p.
-        Credits:
-        #[a(href="https://www.ign.com/wikis/animal-crossing-new-horizons/Fish_Guide:_Fish_List,_Sell_Price,_and_Fishing_Tips" target="_blank") IGN] |
-        #[a(href="https://www.polygon.com/animal-crossing-new-horizons-switch-acnh-guide/2020/3/23/21190775/fish-locations-times-month-day-list-critterpedia" target="_blank") Polygon] |
-        #[a(href="https://animalcrossing.fandom.com/wiki/Fish_(New_Horizons)" target="_blank") Fandom Fish List] |
-        #[a(href="https://animalcrossing.fandom.com/wiki/Bugs_(New_Horizons)" target="_blank") Fandom Bug List] |
+    p.credits.
+      Credits:
+      #[a(href="https://www.ign.com/wikis/animal-crossing-new-horizons/Fish_Guide:_Fish_List,_Sell_Price,_and_Fishing_Tips" target="_blank") IGN] |
+      #[a(href="https://www.polygon.com/animal-crossing-new-horizons-switch-acnh-guide/2020/3/23/21190775/fish-locations-times-month-day-list-critterpedia" target="_blank") Polygon] |
+      #[a(href="https://animalcrossing.fandom.com/wiki/Fish_(New_Horizons)" target="_blank") Fandom Fish List] |
+      #[a(href="https://animalcrossing.fandom.com/wiki/Bugs_(New_Horizons)" target="_blank") Fandom Bug List] |
+      #[a(href="https://animalcrossing.fandom.com/wiki/Deep-sea_creatures_(New_Horizons)" target="_blank") Fandom Deep Sea Creatures List]
 </template>
 
 <script>
@@ -42,6 +47,7 @@ export default {
       all: [],
       fishes: [],
       bugs: [],
+      deepSeaCreatures: [],
       favorites: [],
       overlayState: false,
       selectedItem: null,
@@ -58,6 +64,7 @@ export default {
     this.getType()
     await this.getFishList()
     await this.getBugList()
+    await this.getDeepSeaCreaturesList()
   },
 
   methods: {
@@ -83,6 +90,17 @@ export default {
       this.bugs = res
     },
 
+    async getDeepSeaCreaturesList () {
+      let res = await(await window.fetch('data/deep-sea-creatures.json')).json()
+
+      res.map(item => {
+        item.north = item.north.split(',').map(month => month.trim())
+        item.south = item.south.split(',').map(month => month.trim())
+        return item
+      })
+      this.deepSeaCreatures = res
+    },
+
     getType () {
       if (!window.localStorage.getItem('type')) {
         return window.localStorage.setItem('type', this.selectedType)
@@ -100,19 +118,15 @@ export default {
       this.selectedItem = null
     },
 
-    toggleType () {
-      if (this.selectedType === "fishes") {
-        this.selectedType = "bugs"
-      } else if (this.selectedType === "bugs") {
-        this.selectedType = "fishes"
-      }
+    selectCreatureType (type) {
+      this.selectedType = type
       window.localStorage.setItem('type', this.selectedType)
 
       gtag('event', 'change type', {
-        'event_category': 'toggle',
+        'event_category': 'select creature type',
         'event_label': this.selectedType
       })
-    }
+    },
   }
 }
 </script>
@@ -151,76 +165,58 @@ export default {
 
     .toggle
       position: relative
-      display: grid
-      grid-template-columns: 100px 100px
-      grid-template-rows: 50px
+      display: flex
+      flex-flow: row nowrap
       cursor: pointer
-      place-items: center center
-      background-color: #ECF0F1
       border-radius: 7px
 
       +mobile
-        grid-template-columns: 80px 80px
-        grid-template-rows: 40px
+        flex-flow: row wrap
 
-      &[data-type="fishes"]
-        &::before
-          transform: translateX(0)
-          background-color: #AED6F1
-        .fish
-          color: black
+      button
+        white-space: pre
+        margin: 12px
+        color: $white
 
-      &[data-type="bugs"]
-        &::before
-          transform: translateX(100px)
-          background-color: #76D7C4
+      .fishes
+          background-color: $pastel-blue
 
-          +mobile
-            transform: translateX(80px)
-        .bug
-          color: black
+      .bugs
+          background-color: $tree-green
 
-      &::before
-        content: ""
-        position: absolute
-        width: 116px
-        height: 58px
-        border-radius: 7px
-        background-color: white
-        top: -4px
-        left: -8px
-        z-index: 0
-        transition: transform $speed-normal ease-out, background-color $speed-fast ease-out
-
-        +mobile
-          width: 88px
-          height: 48px
-          top: -4px
-          left: -4px
-
-      .type
-        background-color: transparent
-        z-index: 1
-        font-family: "Share Tech Mono", monospace
-        font-size: 24px
-        transition: all $speed-fast
-        color: $grey
-
-        +mobile
-          font-size: 18px
+      .deep-sea-creatures
+          background-color: $storm-blue
 
   footer
     text-align: center
     padding: 10px 20px
-    background-color: $grey-d
-    font-size: 0.8em
-    color: $white
+    font-size: 12px
+    color: $black
 
     a
       text-decoration: none
-      color: $yellow
+
+      &:hover
+        color: $yellow
+
+    .github-link
+      display: block
+      margin: 10px 0
+
+      img
+        display: inline-block
+        vertical-align: middle
+
+      span
+        display: inline-block
+        vertical-align: middle
+        margin-left: 6px
 
     p + p
       margin-top: 10px
+
+    .credits
+      margin-top: 24px
+      padding-bottom: 12px
 
 </style>
